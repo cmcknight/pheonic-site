@@ -4,10 +4,7 @@ The Pheonic web site contains a collection of articles, resources, and writings 
 
 * Blog - Short articles on a variety of topics
 * Interests - Topic-focused pages
-    * Game Programming
-      * Computer Games
-      * Gaming Aids
     * Programming
     * Robotics
     * Tabletop Games
-* Resources - Wiki-like collection of resources, reference articles, etc.
+    * Resources - Wiki-like collection of resources, reference articles, etc.

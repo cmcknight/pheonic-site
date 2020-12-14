@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --terracotta: #945d60;
+    --herb: #626e60;
+    --chili: #af473c;
+    --charcoal: #3c3c3c;
+    --pheonic-blue: #328da8;
+    --pheonic-white: #fff;
+    --pheonic-lightgrey: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    /* background: #5d6d7e; */
+    background: var(--pheonic-lightgrey);
+}
+
+.site-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.container {
+    background: var(--pheonic-lightgrey);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+    max-width: 100vw;
+    height: 100vw;
+    min-height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 60rem;
+    }
+}
+
+navbar {
+    display: flex;
+    flex-direction: column;
+    background: var(--pheonic-lightgrey);
+    /* justify-content: space-between; */
+    align-items: center;
+    /* align-content: center; */
+    width: 100%;
+    max-width: 100%;
+    border-top: 1px solid var(--charcoal);
+    border-bottom: 1px solid var(--charcoal);
+}
+
+navbar img {
+    display: block;
+    height: 6rem;
+    max-height: 6rem;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+navbar div.navigation ul {
+    padding-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
+    list-style: none;
+}
+
+navbar div.navigation ul li {
+    display: inline;
+}
+
+navbar div.navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    background: var(--pheonic-blue);
+    padding: .5rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+navbar div.navigation ul li a:hover {
+    color: var(--chili);
+}
+
+header .welcome {
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+header h1 {
+    color: var(--pheonic-white);
+    font-size: 1.4rem;
+    padding: .5rem;
+    letter-spacing: 1px;
+    background: var(--pheonic-blue);
+    font-family: 'Roboto', sans-serif;
+    border-radius: .5rem .5rem 0 0;
+}
+
+header .welcome .paragraphs {
+    background: var(--pheonic-lightgrey);
+    border-radius: 0 0 .5rem .5rem;
+    border: 1px solid var(--pheonic-blue);
+}
+
+header .welcome p {
+    color: var(--charcoal);
+    letter-spacing: 1px;
+    line-height: 1.2rem;
+    padding: .5rem;
+    border-radius: 0 0 .5rem .5rem;
+}
+
+section .latest-posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: .5rem;
+    color: var(--charcoal);
+    border-radius: .5rem;
+    margin: 0 .5rem;
+    border: 1px solid var(--pheonic-blue);
+}
+
+section .latest-posts h2 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--pheonic-white);
+    background: var(--pheonic-blue);
+    padding: .5rem;
+    letter-spacing: 1px;
+    border-radius: .5rem .5rem 0 0;
+    font-size: 1.2rem;
+}
+
+section .latest-posts .paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+section .latest-posts article {
+    color: var(--charcoal);
+    background: var(--pheonic-lightgrey);
+    border: 1px solid var(--charcoal);
+    padding: .5rem;
+    border-radius: .5rem;
+    margin: 0 .5rem 0 .5rem;
+}
+
+section .latest-posts .more-link {
+    text-align: right;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+}
+
+section .latest-posts .more-link a {
+    color: var(--pheonic-white);
+    background: var(--pheonic-blue);
+    text-decoration: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--charcoal);
+}
+
+footer {
+    color: var(--charcoal);
+    background: var(--pheonic-lightgrey);
+    padding: .5rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-top: .5rem;
+    overflow: auto;
+}

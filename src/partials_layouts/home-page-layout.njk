@@ -1,0 +1,41 @@
+{% include "_head.njk" %}
+<div class="site-container">
+    <div class="container">
+    {% include "_navbar.njk" %}
+    <header>
+        <div class="welcome">
+            <h1>
+            Welcome to Pheonic!
+            </h1>
+            <div class="paragraphs">
+            <p>Pheonic is a personal repository of whatever I happen to be interested in. These interests change over time, as will the contents of the site. However, the contents will be additive, increasing in number.</p>
+            <p>
+            You are welcome to peruse the various posts and pages and perhaps you will find something of interest or inspiration.</p>
+            </div>
+        <div>
+    </header>
+    <section>
+        <div class="latest-posts">
+            <h2>Latest Posts</h2>
+            <div class="paragraphs">
+                {% set myposts = collections.posts | reverse %}
+                {% set myposts = myposts.slice(0,3) %}
+                {%- for post in myposts -%}
+                {% if post.data.title %}
+                <article>
+                    <h3><a href="{{post.url}}">{{ post.data.title | safe }}</a></h3>
+                    {{ post.data.content | safe }}
+                </article>
+                {% endif %}
+                {%- endfor -%}
+            </div>
+            <div class="more-link"><a href="/blog/">More Posts</a></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2020  Pheonic<p>
+    </footer>
+    </div>
+</div>
+{% include "_foot.njk" %}

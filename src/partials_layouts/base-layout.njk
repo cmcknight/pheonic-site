@@ -1,0 +1,26 @@
+{% include "_head.njk" %}
+<div class="site-container">
+    <div class="container">
+    {% include "_navbar.njk" %}
+
+    <div class="breadcrumbs">
+        <ul>
+        {% for item in breadcrumbs %}
+        {% if item.link %}
+        <li><a href="{{item.link}}">{{ item.label }}</a> &#8811; </li>
+        {% else %}
+        <li>{{ item.label }}</li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2020  Pheonic<p>
+    </footer>
+    </div>
+</div>
+{% include "_foot.njk" %}
