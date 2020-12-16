@@ -1,0 +1,13 @@
+{% if breadcrumbs %}
+<div class="breadcrumbs">
+    {# generate breadcrumbs #}
+    {% for breadcrumb in breadcrumbs %}
+    {% if breadcrumb.url %}
+        <a href="{{breadcrumb.url}}">{{ breadcrumb.label | safe }}</a> &raquo;
+    {% else %}
+        <span class="current">{{ breadcrumb.label | safe }}</span>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="bottom-line"></div>
+{% endif %}

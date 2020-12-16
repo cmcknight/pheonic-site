@@ -1,0 +1,26 @@
+---
+layout: base-layout.njk
+---
+
+<div class="blog-index-container">
+{% for post in posts %}
+    <article>
+    <div class='article-header'>
+        <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+        <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+    </div>
+    <div class="post-content">
+        {% excerpt post %}
+        <p class="read-more-link"><a href="{{ post.url | url}}">Read more...</a></p>
+    </div>
+    </article>
+    {% endfor %}
+  
+    <div class="page-nav center-div">
+        <ul>
+            <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+
+            <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+        </ul>
+    </div>
+</div>
