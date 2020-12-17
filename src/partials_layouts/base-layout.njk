@@ -2,17 +2,18 @@
 <div class="site-container">
     <div class="container">
 
-    {% include "_navbar.njk" %}
+        {% include "_navbar.njk" %}
 
-    {% include "_breadcrumbs.njk" %}
+        {% include "_breadcrumbs.njk" %}
 
-    <main>
-        {{ content | safe }}
-    </main>
+        {# <main> #}
+            {{ content | safe }}
+        {# </main> #}
 
-    <footer>
-        <p>Copyright &copy; 2020  Pheonic<p>
-    </footer>
+        <div class="footer">
+        <p>Copyright &copy; 2020  Pheonic</p>
+        </div>
     </div>
 </div>
+
 {% include "_foot.njk" %}

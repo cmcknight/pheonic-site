@@ -36,8 +36,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100vh;
-    min-height: 100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -47,8 +46,6 @@ body {
     gap: .5rem;
     width: 100%;
     max-width: var(--max-content-width);
-    height: 100vw;
-    min-height: 100%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -63,7 +60,8 @@ navbar .navigation {
     background: var(--pheonic-lightgrey);
     align-items: center;
     width: 100%;
-    max-width: var(--max-content-width);
+    padding-left: 1rem;
+    padding-right: 1rem;
     border-top: 1px solid var(--pheonic-blue);
     border-bottom: 1px solid var(--pheonic-blue);
 }
@@ -271,6 +269,12 @@ section .latest-posts .more-link a {
     font-family: 'Roboto', sans-serif;
 }
 
+.blog-index-container article .post-content a {
+    color: var(--pheonic-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .blog-index-container article .article-header time {
     color: var(--pheonic-lightgrey);
     font-family: 'Roboto', sans-serif;
@@ -347,7 +351,7 @@ section .latest-posts .paragraphs article p.read-more-link a,
     padding-top: .5rem;
 }
 
-.blog-article-container article .post-content p a {
+.blog-article-container article .post-content a {
     text-decoration: none;
     color: var(--pheonic-blue);
     font-weight: bold;
@@ -468,25 +472,22 @@ section .latest-posts .paragraphs article p.read-more-link a,
     text-decoration: none;
 }
 
-footer {
+.footer {
     color: var(--charcoal);
     background: var(--pheonic-lightgrey);
-    padding: .5rem;
     text-align: center;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     font-size: .8rem;
-    padding: .5rem 0 1.5rem;
-    border: solid 1px var(--pheonic-blue);
+    border-top: solid 1px var(--pheonic-blue);
     overflow: auto;
-    color: var(--pheonic-white);
-    background: var(--pheonic-blue);
+    color: var(--charcoal);
+    padding: .5rem 0 1rem;
 }
 
 @media screen and (min-width: 768px) {
-    footer {
+    .footer {
         border-radius: .4rem;
-        padding-bottom: .5rem;
     }
 }
 

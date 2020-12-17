@@ -3,6 +3,12 @@ title: Pheonic Reboot!
 permalink: /blog/2020/pheonic-reboot/
 layout: blog-article-layout.njk
 date: 2020-12-16
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: Pheonic Reboot!
 tags:
   - posts
 ---

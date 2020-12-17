@@ -3,6 +3,12 @@ title: FTC Robotics
 layout: blog-article-layout.njk
 permalink: /blog/2017/ftc-robotics/
 date: 2017-01-28
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: FTC Robotics
 tags:
     - posts
 ---

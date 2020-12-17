@@ -3,6 +3,12 @@ title: Are delay and delayMicroseconds Considered Harmful?
 permalink: /blog/are-delay-and-delaymicroseconds-considered-harmful/
 layout: blog-article-layout.njk
 date: 2018-02-18
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: Are delay and delayMicroseconds Considered Harmful?
 tags:
     - posts
 ---

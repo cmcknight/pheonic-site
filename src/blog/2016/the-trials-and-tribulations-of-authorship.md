@@ -3,6 +3,12 @@ title: The Trials and Tribulations of Authorship
 permalink: /blog/the-trials-and-tribulations-of-authorship/
 layout: blog-article-layout.njk
 date: 2016-04-16
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: The Trials and Tribulations of Authorship
 tags:
     - posts
 ---

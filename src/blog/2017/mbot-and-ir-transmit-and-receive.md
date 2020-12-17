@@ -1,8 +1,14 @@
 ---
-title: mBZot and IR Transmit and Receive
+title: mBot and IR Transmit and Receive
 permalink: /blog/mbot-and-ir-transmit-and-receive/
 layout: blog-article-layout.njk
 date: 2017-07-12
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: mBot and IR Transmit and Receive
 tags:
     - posts
 ---

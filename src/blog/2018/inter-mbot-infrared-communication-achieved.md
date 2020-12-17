@@ -3,6 +3,12 @@ title: Inter-mBot Infrared Communication Achieved
 permalink: /blog/inter-mbot-infrared-communication-achieved/
 layout: blog-article-layout.njk
 date: 2018-03-26
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: Inter-mBot Infrared Communication Achieved
 tags:
     - posts
 ---

@@ -3,6 +3,12 @@ title: Maze Solving with the mBot
 layout: blog-article-layout.njk
 permalink: /blog/2015/maze-solving-with-the-mbot/
 date: 2015-12-03
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: Maze Solving with the mBot
 tags:
     - posts
 ---

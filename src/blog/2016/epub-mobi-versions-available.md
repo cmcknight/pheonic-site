@@ -3,6 +3,12 @@ title: .ePub/.mobi Versions Available
 permalink: /blog/epub-mobi-versions-available/
 layout: blog-article-layout.njk
 date: 2016-06-20
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: .ePub/.mobi Versions Available
 tags:
     - posts
 ---

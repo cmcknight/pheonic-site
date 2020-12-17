@@ -3,6 +3,12 @@ title: The Book (in PDF format) is Out!
 permalink: /blog/2016/the-book-in-pdf-format-is-out/
 layout: blog-article-layout.njk
 date: 2016-05-06
+breadcrumbs:
+    - label: Home
+      url: /
+    - label: Blog
+      url: /blog/
+    - label: The Book (in PDF format) is Out!
 tags:
     - posts
 ---
