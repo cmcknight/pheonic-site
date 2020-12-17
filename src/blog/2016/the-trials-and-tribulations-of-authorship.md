@@ -16,3 +16,9 @@ Subjects that I thought I had adequately explained in simple detail were kicked 
 After a couple of weeks off, I'll start on the second book in the series. The first book focuses on Scratch programming and covers a dozen programs to illustrate the concepts. The next book will revisit those programs but from a C/C++ perspective using the Arduino IDE. I'm considering a final book in the series which will likely be a cookbook of projects that may require the purchase of additional parts, something I avoid in the first two books.
 
 In any case, I hope that the book is informative and enjoyable.
+
+<div class="center-text">
+
+[Originally published on _Robotic Ramblings_]
+
+</div>

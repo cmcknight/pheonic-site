@@ -1,0 +1,14 @@
+---
+layout: base-layout.njk
+---
+<div class="blog-article-container">
+    <article>
+        <div class="article-header">
+            <h1>{{ title | safe }}</h1>
+            <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
+        </div>
+        <div class="post-content">
+            {{ content | safe }}
+        </div>
+    </article>
+</div>

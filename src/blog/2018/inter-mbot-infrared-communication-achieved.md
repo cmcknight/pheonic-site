@@ -14,3 +14,9 @@ One of the areas that I passed over in the first volume of A Gentle Introduction
 [![mBot Master Slave Infrared Communication](http://img.youtube.com/vi/CV5pVIOaI0U/0.jpg)](http://www.youtube.com/watch?v=CV5pVIOaI0U "mBot Master Slave Infrared Communication")
 
 </div>
+
+<div class="center-text">
+
+[Originally published on _Robotic Ramblings_]
+
+</div>

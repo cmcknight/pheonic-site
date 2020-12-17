@@ -52,3 +52,9 @@ The first robot was little more than a "rolling pole" as one of the team's class
 </div>
 
 Getting back to writing will depend largely on whether or not the team advances past the state level. My lesson learned from the experience is that coaching a first year FTC team borders on adding another full-time job but it's rewarding to watch the kids learn and grow.
+
+<div class="center-text">
+
+[Originally published on _Robotic Ramblings_]
+
+</div>

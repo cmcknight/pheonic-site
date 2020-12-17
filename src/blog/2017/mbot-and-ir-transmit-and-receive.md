@@ -57,3 +57,9 @@ And a simple IR Send program:
  18 Serial.println("Sending IR String: Winning" );
  19 }
  ```
+
+ <div class="center-text">
+
+[Originally published on _Robotic Ramblings_]
+
+</div>

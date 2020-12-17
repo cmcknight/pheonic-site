@@ -18,3 +18,9 @@ With all that in mind, I'm working on writing a maze solving program in mBlock t
 3. Giving the motors the same values to make a turn (i.e., 100 / -100) results in the motor with the positive value turning and the other motor sitting idle. (Update: this is due to serial lag over wifi when running from the mBlock environment. The problem does not exist if you upload the program to the mBot and run it there)
 
 I've ordered a gyro sensor and a compass sensor to see if I can improve the accuracy of the turns and will report on that when I get them. I was initially looking at using the ultrasonic sensor to detect walls and having the robot spin in each new room to map the walls in the room. However, that approach is hampered until I suss out how to make consistent, accurate turns. More on this when I have it.
+
+<div class="center-text">
+
+[Originally published on _Robotic Ramblings_]
+
+</div>

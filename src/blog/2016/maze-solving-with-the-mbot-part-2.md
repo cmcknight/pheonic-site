@@ -30,3 +30,9 @@ OK, enough of that. I knew it would be challenging, but perseverance is its own 
 </div>
 
 I should mention that the maze itself uses 3D printed posts and pegs (see [here](https://web.archive.org/web/20190414105742/http://www.thingiverse.com/thing:1169585) a bunch of 4mm foam core board, and some black masking tape. I'll write more about the choices in another post, but enjoy the mighty mBot boldly going where no mBot has gone before.
+
+<div class="center-text">
+
+[Originally published on _Robotic Ramblings_]
+
+</div>

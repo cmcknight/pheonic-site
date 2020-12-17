@@ -16,7 +16,7 @@ layout: base-layout.njk
                 <h3>{{ card.title | safe }}</h3>
                     <ul>
                     {% for item in card.items %}
-                        <li>{{ item | safe}}</li>
+                        <li><a href="{{item.url}}">{{ item.title | safe}}</a></li>
                     {% endfor %}
                     </ul>
             </div>
