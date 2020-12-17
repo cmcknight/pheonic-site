@@ -1,6 +1,6 @@
 ---
 title: Topics
-permalink: /topics/
+permalink: /pages/topics/
 layout: topical-index.njk
 breadcrumbs:
   - label: Home
@@ -11,7 +11,7 @@ cards:
     title: Robotics
     items:
       - title: mBot (Arduino)
-        url: /topics/mbot/makeblock-mbot/
+        url: /pages/topics/mbot/makeblock-mbot/
   - card:
     title: Software Development
     items:

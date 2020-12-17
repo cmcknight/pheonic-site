@@ -1,6 +1,6 @@
 ---
 title: Makeblock mBot
-permalink: /topics/mbot/makeblock-mbot/
+permalink: /pages/topics/mbot/makeblock-mbot/
 layout: page-layout.njk
 tags:
   - mBot
