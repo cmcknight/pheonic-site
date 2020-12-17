@@ -414,9 +414,9 @@ section .latest-posts .paragraphs article p.read-more-link a,
 .topical-index-container .topic-cards article {
     margin: .5rem;
     border: 1px solid var(--pheonic-blue);
-    border-top-left-radius: .4rem;
-    border-top-right-radius: .4rem;
+    border-radius: .4rem;
     font-family: 'Roboto', sans-serif;
+    background: var(--pheonic-parchment);
 }
 
 .topical-index-container .topic-cards article h3 {
@@ -439,8 +439,19 @@ footer {
     text-align: center;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    margin-top: .5rem;
+    font-size: .8rem;
+    padding: .5rem 0 1.5rem;
+    border: solid 1px var(--pheonic-blue);
     overflow: auto;
+    color: var(--pheonic-white);
+    background: var(--pheonic-blue);
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        border-radius: .4rem;
+        padding-bottom: .5rem;
+    }
 }
 
 .center-div {
@@ -450,6 +461,7 @@ footer {
 
 .page-nav {
     font-family: 'Roboto', sans-serif;
+    margin-bottom: .5rem;
 }
 .page-nav ul li {
     display: inline;    
@@ -459,7 +471,9 @@ footer {
     font-weight: bold;
     color: var(--pheonic-white);
     background: var(--pheonic-blue);
-    padding: .2rem;
+    padding: .3rem;
+    border: 1px solid var(--pheonic-blue);
+    border-radius: .5rem;
 }
 
 .image-container {

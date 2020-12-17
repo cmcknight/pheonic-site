@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
+    <title>mBZot and IR Transmit and Receive</title>
+</head>
+<body>
+
+
+
+<div class="site-container">
+    <div class="container">
+
+    <navbar>
+    <div class="navigation">
+        <a href="/"><img src="/img/pheonic-logo2.png"></a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/topics/">Topics</a>
+            <li><a href="/resources/">Links</a>
+            <li><a href="/blog/">About</a></li>
+        </ul>
+    </div>
+</navbar>
+
+    
+
+
+    <main>
+        <div class="blog-article-container">
+    <article>
+        <div class="article-header">
+            <h1>mBZot and IR Transmit and Receive</h1>
+            <time datetime="2017-07-12T00:00:00.000Z">July 12, 2017</time>
+        </div>
+        <div class="post-content">
+            <p>In my first book I avoided the IR Transmit and Receive devices other than using the included IR remote that comes with the mBot. Some of that had to do with not being able to get the test programs in Scratch to work, but a lot of it was more because I couldn't think of an application for a single mBot. That's still the case, but I've got an idea for an application with two or more mBots that will appear in volume 2 of the &quot;A Gentle Introduction to Robotics&quot; series. That being said, I wanted to share a couple of test apps that I've written  so that you can go forth and be creative if you have a couple of mBots (and really, who wouldn't want to have two?).</p>
+<p>This is a simple IR Receive program:</p>
+<p>File: IR_Receive_Test.ino</p>
+<pre><code> 1 #include &lt;Arduino.h&gt;
+ 2 #include &lt;Wire.h&gt;
+ 3 #include &lt;SoftwareSerial.h&gt;
+ 4 
+ 5 #include &lt;MeMCore.h&gt;
+ 6 
+ 7 MeIR ir_receiver;
+ 8 
+ 9 #include &lt;MeMCore.h&gt;
+ 10 
+ 11 void setup() {
+ 12 Serial.begin(9600);
+ 13 ir_receiver.begin();
+ 14 }
+ 15 
+ 16 void loop() {
+ 17 Serial.println(&quot;IR Code: &quot; + ir_receiver.getString());
+ 18 }
+</code></pre>
+<p>And a simple IR Send program:</p>
+<pre><code> 1 #include &lt;Arduino.h&gt;
+ 2 #include &lt;Wire.h&gt;
+ 3 #include &lt;SoftwareSerial.h&gt;
+ 4 
+ 5 #include &lt;MeMCore.h&gt;
+ 6 
+ 7 MeIR ir;
+ 8 
+ 9 #include &lt;MeMCore.h&gt;
+ 10 
+ 11 void setup() {
+ 12 Serial.begin(9600);
+ 13 ir.begin();
+ 14 }
+ 15 
+ 16 void loop() {
+ 17 ir.sendString(&quot;Winning&quot;);
+ 18 Serial.println(&quot;Sending IR String: Winning&quot; );
+ 19 }
+</code></pre>
+
+        </div>
+    </article>
+</div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2020  Pheonic<p>
+    </footer>
+    </div>
+</div>
+</body>
+</html>

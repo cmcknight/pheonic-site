@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
+    <title>Are delay and delayMicroseconds Considered Harmful?</title>
+</head>
+<body>
+
+
+
+<div class="site-container">
+    <div class="container">
+
+    <navbar>
+    <div class="navigation">
+        <a href="/"><img src="/img/pheonic-logo2.png"></a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/topics/">Topics</a>
+            <li><a href="/resources/">Links</a>
+            <li><a href="/blog/">About</a></li>
+        </ul>
+    </div>
+</navbar>
+
+    
+
+
+    <main>
+        <div class="blog-article-container">
+    <article>
+        <div class="article-header">
+            <h1>Are delay and delayMicroseconds Considered Harmful?</h1>
+            <time datetime="2018-02-18T00:00:00.000Z">February 18, 2018</time>
+        </div>
+        <div class="post-content">
+            <p>One of the big things I've noticed in a lot of the Arduino tutorials is the use of delay() and delayMicroseconds(). Both of these methods are &quot;blocking&quot; calls that literally stop the operation of the microprocessor until they complete. Apparently a lot of folks aren't aware of the millis() and micros() timer functions which are non-blocking so I wrote a small utility object named ActionTimer that uses the millis() method and published it on Github <a href="https://web.archive.org/web/20190414105803/https://github.com/senestone/ActionTimer">link</a>. It seems to work well for me but of course, your mileage may vary. More interestingly is that I have seen the same thing pop up for the FTC teams using the FTC SDK in Java, so it is apparently not an uncommon situation.</p>
+
+        </div>
+    </article>
+</div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2020  Pheonic<p>
+    </footer>
+    </div>
+</div>
+</body>
+</html>

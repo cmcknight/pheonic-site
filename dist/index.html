@@ -44,35 +44,32 @@
                 
                 <article>
                     <div class="home-page-title">
-                        <h3><a href="/blog/2017/ftc-robotics/">FTC Robotics</a></h3>
+                        <h3><a href="/blog/inter-mbot-infrared-communication-achieved/">Inter-mBot Infrared Communication Achieved</a></h3>
                     </div>
                     <div class="post-excerpt">
-                    The writing for volume 2 has been on the back burner due to my coaching a First Technology Challenge team. The team members are all in middle (7th-8th grade) and have been doing well for their first year. The team managed to place second in their league and second in the Inter-League competition so now they will be competing at the state level in a couple of weeks. Whether or not they will continue to advance is sort of unknown, but it's been quite interesting to see how they evolve as a team and how the robot has evolved.
+                    One of the areas that I passed over in the first volume of A Gentle Introduction to Robotics was the use of the infrared transmitter/receiver that is on the mBot. My original plan was to use it to facilitate inter-mBot communication so that at some point I could demonstrate simple swarm robotics. However, I ran into too many issues via mBlock (which have apparently been resolved with the current version) and it was preventing me from completing the book so I dropped that chapter with the intention of addressing those devices in the second volume of the series which focuses on native programming in the Arduino environment. While there are innumerable ways to make use of inter-mBot communications, I'll present a short video below of one mBot changing the color of its LEDs and sending the color to another mBot so that the other mBot can match colors with the first.
                     </div>
-                    <p class="read-more-link"><a href="/blog/2017/ftc-robotics/">Read more...</a></p>
+                    <p class="read-more-link"><a href="/blog/inter-mbot-infrared-communication-achieved/">Read more...</a></p>
                 </article>
                 
                 <article>
                     <div class="home-page-title">
-                        <h3><a href="/blog/2016/maze-solving-with-the-mbot-part-2/">Maze Solving with the mBot - Part 2</a></h3>
+                        <h3><a href="/blog/are-delay-and-delaymicroseconds-considered-harmful/">Are delay and delayMicroseconds Considered Harmful?</a></h3>
                     </div>
                     <div class="post-excerpt">
-                    OK, so I've learned lots about the mBot and mBlock programming since my last post.
-<h3>The Good</h3>
-<p>It is possible, with patience, to write highly readable programs in mBlock (Scratch 2.0).
-The Makeblock team keeps improving mBlock.
+                    One of the big things I've noticed in a lot of the Arduino tutorials is the use of delay() and delayMicroseconds(). Both of these methods are &quot;blocking&quot; calls that literally stop the operation of the microprocessor until they complete. Apparently a lot of folks aren't aware of the millis() and micros() timer functions which are non-blocking so I wrote a small utility object named ActionTimer that uses the millis() method and published it on Github <a href="https://web.archive.org/web/20190414105803/https://github.com/senestone/ActionTimer">link</a>. It seems to work well for me but of course, your mileage may vary. More interestingly is that I have seen the same thing pop up for the FTC teams using the FTC SDK in Java, so it is apparently not an uncommon situation.
                     </div>
-                    <p class="read-more-link"><a href="/blog/2016/maze-solving-with-the-mbot-part-2/">Read more...</a></p>
+                    <p class="read-more-link"><a href="/blog/are-delay-and-delaymicroseconds-considered-harmful/">Read more...</a></p>
                 </article>
                 
                 <article>
                     <div class="home-page-title">
-                        <h3><a href="/blog/2015/maze-solving-with-the-mbot/">Maze Solving with the mBot</a></h3>
+                        <h3><a href="/blog/mbot-and-ir-transmit-and-receive/">mBZot and IR Transmit and Receive</a></h3>
                     </div>
                     <div class="post-excerpt">
-                    One of the exercises that I want to do with the mBot is to write a maze solving application in the mBlock environment. While it certainly would be easier to do in the native Arduino environment, I'm always up for a challenge. The mBlock environment is based on the Scratch 2.0 offline editor and is open source software. One of the issues with the Scratch 2.0 offline editor is that it is written in Adobe's proprietary ActionScript. Yes, you read that correctly, ActionScript. For Adobe Air. You know, the supposedly cross-platform environment that isn't supported under Linux (FAIL!@!). In any case, enough ranting about the choice of development language the MIT team has made, I have to live with it (for now).
+                    In my first book I avoided the IR Transmit and Receive devices other than using the included IR remote that comes with the mBot. Some of that had to do with not being able to get the test programs in Scratch to work, but a lot of it was more because I couldn't think of an application for a single mBot. That's still the case, but I've got an idea for an application with two or more mBots that will appear in volume 2 of the &quot;A Gentle Introduction to Robotics&quot; series. That being said, I wanted to share a couple of test apps that I've written  so that you can go forth and be creative if you have a couple of mBots (and really, who wouldn't want to have two?).
                     </div>
-                    <p class="read-more-link"><a href="/blog/2015/maze-solving-with-the-mbot/">Read more...</a></p>
+                    <p class="read-more-link"><a href="/blog/mbot-and-ir-transmit-and-receive/">Read more...</a></p>
                 </article>
                 </div>
             <div class="more-link"><a href="/blog/">More Posts</a></div>
