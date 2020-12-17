@@ -253,12 +253,14 @@ section .latest-posts .more-link a {
     border: 1px solid var(--pheonic-blue);
 }
 
+.project-index-container article,
 .blog-index-container article {
     margin: 0 1rem 1rem 1rem;
     border-radius: .5rem;
     background: var(--pheonic-parchment);
 }
 
+.project-index-container article .article-header,
 .blog-index-container article .article-header {
     background: var(--pheonic-blue);
     padding: .5rem;
@@ -266,27 +268,34 @@ section .latest-posts .more-link a {
     border-top-right-radius: .3rem;
 }
 
+.project-index-container article .article-header h2,
 .blog-index-container article .article-header h2 {
     color: #fff;
     font-size: 1.2rem;
 }
 
+.project-index-container article .project-content h3,
 .blog-index-container article .post-content h3 {
     color: var(--charcoal);
     font-size: 1.1rem;
     padding: .5rem 0 .25rem;
 }
 
+.project-index-container article .project-content p,
 .blog-index-container article .post-content p {
     padding-bottom: 1rem;
 }
 
+.project-index-container article .article-header h2 a,
 .blog-index-container article .article-header h2 a {
     color: #fff;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
 
+.project-index-container article .project-content a,
+.project-index-container article .repo-link a,
+.project-container article .repo-link a,
 .blog-index-container article .post-content a {
     color: var(--pheonic-blue);
     text-decoration: none;
@@ -300,6 +309,7 @@ section .latest-posts .more-link a {
     font-weight: 600;
 }
 
+.project-index-container article .project-content,
 .blog-index-container article .post-content {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
@@ -312,27 +322,37 @@ section .latest-posts .more-link a {
 }
 
 section .latest-posts .paragraphs article p.read-more-link,
+.project-index-container article .project-content p.read-more-link,
 .blog-index-container article .post-content p.read-more-link {
     text-align: right;
     padding-top: .5rem;
 }
 
 section .latest-posts .paragraphs article p.read-more-link a,
+.project-index-container article p.read-more-link a,
 .blog-index-container article .post-content p.read-more-link a {
     color: var(--pheonic-blue);
     text-decoration: none;
 }
 
+.project-index-container article .repo-link,
+.project-container article .repo-link {
+    padding-bottom: 1rem;
+}
+
+.project-container,
 .blog-article-container {
     padding: 0 .5rem;
 }
 
+.project-container article,
 .blog-article-container article {
     background: var(--pheonic-parchment);
     border: 1px solid var(--pheonic-blue);
     border-radius: .4rem;
 }
 
+.project-container article .project-header,
 .blog-article-container article .article-header {
     background: var(--pheonic-blue);
     padding: .5rem;
@@ -340,6 +360,7 @@ section .latest-posts .paragraphs article p.read-more-link a,
     border-top-right-radius: .3rem;
 }
 
+.project-container article .project-header h1,
 .blog-article-container article .article-header h1 {
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -352,10 +373,12 @@ section .latest-posts .paragraphs article p.read-more-link a,
     color: var(--pheonic-lightgrey);
 }
 
+.project-container article .project-content,
 .blog-article-container article .post-content {
     padding: 0 .5rem .5rem .5rem;
 }
 
+.project-container article .project-content h2,
 .blog-article-container article .post-content h2 {
     font-family: 'Roboto', sans-serif;
     color: var(--charcoal);
@@ -363,12 +386,14 @@ section .latest-posts .paragraphs article p.read-more-link a,
     padding-top: .5rem;
 }
 
+.project-container article .project-content p,
 .blog-article-container article .post-content p {
     color: var(--charcoal);
     font-family: 'Roboto', sans-serif;
     padding-top: .5rem;
 }
 
+.project-container article .project-content a,
 .blog-article-container article .post-content a {
     text-decoration: none;
     color: var(--pheonic-blue);
@@ -376,9 +401,31 @@ section .latest-posts .paragraphs article p.read-more-link a,
     font-style: italic;
 }
 
+.project-container article .project-content uls,
+.project-container article .project-content ol,
+.project-containter article .project-tags,
 .blog-article-container article .post-content ul,
 .blog-article-container article .post-content ol {
     padding: .5rem 1.5em 0 1.5rem;
+}
+
+.project-container article .project-tags {
+    padding: .5rem 1rem 0 1rem;
+    font-family: Roboto, sans-serif;
+}
+
+.project-container article .project-tags ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+}
+
+.project-container article .project-tags li:before {
+    display: inline-block;
+    content: '-';
+    width: 1rem;
 }
 
 .blog-article-container article .post-content .blog-article-table {
@@ -423,17 +470,12 @@ section .latest-posts .paragraphs article p.read-more-link a,
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    color: var(--charcoal);
-    background: var(--pheonic-lightgrey);
-}
-
-.topical-index-container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     border-radius: .3rem;
     border: 1px var(--pheonic-blue) solid;
     max-width: var(--max-content-width);
+    color: var(--charcoal);
+    background: var(--pheonic-lightgrey);
 }
 
 .topical-index-container header {

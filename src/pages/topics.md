@@ -10,18 +10,18 @@ cards:
   - card:
     title: Robotics
     items:
-      - title: mBot (Arduino)
-        url: /pages/topics/mbot/makeblock-mbot/
+      - title: Makeblock mBot
+        url: /pages/topics/makeblock/makeblock-mbot/
   - card:
     title: Software Development
     items:
       - title: Desktop Projects
-        url: #
+        url: /pages/topics/desktop-projects/
       - title: Embedded Projects
-        url: #
+        url: /pages/topics/embedded-projects/
   - card:
     title: Web Projects
     items:
       - title: Farmer Frog
-        url: #
+        url: /pages/topics/web-projects/farmer-frog/
 ---

@@ -1,0 +1,29 @@
+---
+layout: base-layout.njk
+---
+
+<div class="project-index-container">
+{% for proj in projects %}
+    <article>
+    <div class='article-header'>
+        <h2><a href="{{ proj.url | url }}">{{ proj.data.title }}</a></h2>
+    </div>
+    <div class="project-content">
+    <div class="repo-link">
+        <strong>Repository Link:</strong> <a href="{{ proj.data.repo_link | url }}">Github</a>
+    </div>
+        <p><strong>Description:</strong></p>
+        {% excerpt proj %}
+        <p class="read-more-link"><a href="{{ proj.url | url}}">Read more...</a></p>
+    </div>
+    </article>
+    {% endfor %}
+  
+    <div class="page-nav center-div">
+        <ul>
+            <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+
+            <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+        </ul>
+    </div>
+</div>

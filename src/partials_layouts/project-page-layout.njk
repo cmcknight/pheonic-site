@@ -1,0 +1,33 @@
+---
+layout: base-layout.njk
+---
+<div class="project-container">
+    <article>
+        <div class="project-header">
+            <h1>{{ title | safe }}</h1>
+        </div>
+    {% if proj.data.repo_link %}
+    <div class="repo-link">
+        <strong>Repository Link:</strong> <a href="{{ proj.data.repo_link | url }}">Github</a>
+    </div>
+    {% endif %}
+        <div class="project-content">
+        <p><strong>Description:</strong></p>
+            {{ content | safe }}
+        </div>
+{#
+        <hr>
+        {% if tags %}
+        <div class="project-tags">
+            <p><strong>Tags:</strong>
+                <ul>
+            {% for tag in tags %}
+                    <li>{{ tag }}</li>
+            {% endfor %}
+                </ul>
+            </p>
+        </div>
+        {% endif %}
+#}
+    </article>
+</div>
