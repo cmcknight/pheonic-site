@@ -9,9 +9,11 @@ layout: base-layout.njk
         <h2><a href="{{ proj.url | url }}">{{ proj.data.title }}</a></h2>
     </div>
     <div class="project-content">
+    {% if proj.data.repo-link %}
     <div class="repo-link">
         <strong>Repository Link:</strong> <a href="{{ proj.data.repo_link | url }}">Github</a>
     </div>
+    {% endif %}
         <p><strong>Description:</strong></p>
         {% excerpt proj %}
         <p class="read-more-link"><a href="{{ proj.url | url}}">Read more...</a></p>
