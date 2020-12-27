@@ -28,43 +28,41 @@ tags:
         <div class="divider"></div>
         <div class="form-panel">
             <h3>Character Data</h3>
-            <!-- <form onsubmit="return false;"> -->
-            <div class="form-controls">
-                <label for="kindred">Kindred:</label>
-                <select id="kindred" class="kindred" name="kindred" list="kindred-types">
-                    <option value="Human">Human</option>
-                    <option value="Dwarf (Gristlegrim)">Dwarf (Gristlegrim)</option>
-                    <option value="Dwarf (Midgardian)">Dwarf (Midgardian)</option>
-                    <option value="Elf">Elf</option>
-                    <option value="Fairy">Fairy</option>
-                    <option value="Hobb">Hobb</option>
-                    <option value="Leprechaun">Leprechaun</option>
-               </select>
-            </div>
-            <div class="form-controls">
-                <label for="char-type">Type:</label>
-                <select class="char-type" id="char-type" list="char-types" name="char-type">
-                    <option value="Rogue">Rogue</option>
-                    <option value="Warrior">Warrior</option>
-                    <option value="Wizard">Wizard</option>
+                <div class="form-controls">
+                    <label for="kindred">Kindred:</label>
+                    <select id="kindred" class="kindred" name="kindred" list="kindred-types">
+                        <option value="Human">Human</option>
+                        <option value="Dwarf (Gristlegrim)">Dwarf (Gristlegrim)</option>
+                        <option value="Dwarf (Midgardian)">Dwarf (Midgardian)</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Fairy">Fairy</option>
+                        <option value="Hobb">Hobb</option>
+                        <option value="Leprechaun">Leprechaun</option>
                 </select>
-            </div>
-            <div class="form-controls">
-                <label for="gender">Gender:</label>
-                <select id="gender" class="gender" name="gender" list="genders">
-                <datalist id="genders">
-                    <option value="Female">Female</option>
-                    <option value="Male">Male</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
+                </div>
+                <div class="form-controls">
+                    <label for="char-type">Type:</label>
+                    <select class="char-type" id="char-type" list="char-types" name="char-type">
+                        <option value="Rogue">Rogue</option>
+                        <option value="Warrior">Warrior</option>
+                        <option value="Wizard">Wizard</option>
+                    </select>
+                </div>
+                <div class="form-controls">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" class="gender" name="gender" list="genders">
+                    <datalist id="genders">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
             <div class="btn-div">
                 <button id="generate" class="generate">Generate New Character</button>
             </div>
-            <!-- </form> -->
         </div>
         <div class="divider"></div>
-        <div class="stat-panel">
+        <div class="stat-panel" id="stat-panel">
             <div class="stat-table">
                 <h3>Character Stats</h3>
                 <table id="char-stats"></table>

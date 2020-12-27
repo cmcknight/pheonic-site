@@ -9,6 +9,8 @@ btnGenerate.addEventListener("click", generateStats);
 const tblCharStats = document.getElementById("char-stats");
 const divOtherData = document.getElementById("other-stats-table");
 
+const divStatPanel = document.getElementById("stat-panel");
+
 const kindred = [
     "Dwarf (Gristlegrim)",
     "Dwarf (Midgardian)",
@@ -197,8 +199,11 @@ function generateStats(e) {
     stats["WT_POSS"] = stats["STR"] * 10;
     stats["GP"] = calculateGold();
     stats["WT_CARR"] = stats["GP"];
+
     loadStatTable();
     loadOtherStats();
+
+    divStatPanel.style.display = "flex";
 }
 
 function applyKindredMods() {
@@ -269,7 +274,7 @@ function loadOtherStats() {
     <tbody>
         <tr>
             <td><span>HT:</span> ${feet}'${inches}"</td>
-            <td><span>WT:</span> ${stats[stat_names["WT"]]}</td>
+            <td><span>WT:</span> ${stats["WT"]}</td>
         </tr>
         <tr>
             <td><span>Max Wt:</span> ${stats["WT_POSS"]}</td>

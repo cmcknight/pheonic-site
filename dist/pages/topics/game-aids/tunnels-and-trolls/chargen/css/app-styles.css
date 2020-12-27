@@ -12,6 +12,7 @@
     .row-container .app-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
         width: 20rem;
@@ -30,7 +31,6 @@
     .row-container .app-container .form-panel {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         width: 20rem;
         gap: .5rem;
@@ -51,7 +51,7 @@
         text-align: right;
     }
     
-    .row-container .app-container .form-panel form .form-controls label {
+    .row-container .app-container .form-panel .form-controls label {
         font-weight: bold;
     }
     
@@ -75,31 +75,39 @@
     }
     
     .row-container .app-container .stat-panel {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
     
-    .row-container .app-container .stat-panel .stat-table {}
-    
-    .row-container .app-container .stat-panel .stat-table table,
-    .row-container .app-container .stat-panel .other-stats table {
+    .row-container .app-container .stat-panel .stat-table table {
         table-layout: fixed;
         padding-top: .5rem;
         width: 18rem;
     }
     
-    .row-container .app-container .stat-panel .stat-table table th {
+    .row-container .app-container .stat-panel .stat-table table th,
+    .row-container .app-container .stat-panel .stat-table table td {
         font-family: 'Aclonica', sans-serif;
         text-align: center;
     }
     
-    .row-container .app-container .stat-panel .stat-table table td {
-        text-align: center;
+    .row-container .app-container .stat-panel .other-stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 18rem;
     }
     
-    .row-container .app-container .stat-panel .other-stats table td span {
+    .row-container .app-container .stat-panel .other-stats table {
+        table-layout: fixed;
+        padding-top: .5rem;
+        width: 15rem;
+    }
+    
+    .row-container .app-container .stat-panel .other-stats table td {
         font-family: 'Aclonica', sans-serif;
     }
     
