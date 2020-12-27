@@ -3,12 +3,12 @@
     .app-desc {
         display: none;
     }
-    
+
     .row-container {
         display: flex;
         justify-content: center;
     }
-    
+
     .row-container .app-container {
         display: flex;
         flex-direction: column;
@@ -21,45 +21,45 @@
         padding: .5rem 0;
         border-radius: .5rem;
     }
-    
+
     .row-container .app-container .tnt h1 {
         font-family: 'Aclonica', sans-serif;
         font-size: 1.4rem;
         text-align: center;
     }
-    
+
     .row-container .app-container .form-panel {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 20rem;
-        gap: .5rem;
+        gap: 1rem;
     }
-    
-    .row-container .app-container .form-panel h3,
-    .row-container .app-container .stat-panel .stat-table h3,
-    .row-container .app-container .stat-panel .other-stats h3 {
+
+    .row-container .app-container .form-panel h3, .row-container .app-container .stat-panel .stat-table h3, .row-container .app-container .stat-panel .other-stats h3 {
         font-family: 'Aclonica', sans-serif;
         text-align: center;
+        padding: .5rem 0;
     }
-    
-    .row-container .app-container .form-panel form .form-controls {
+
+    .row-container .app-container .form-panel .form-controls {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-        padding-top: .5rem;
         gap: .5rem;
+        padding: .5rem 0;
         text-align: right;
     }
-    
+
     .row-container .app-container .form-panel .form-controls label {
         font-weight: bold;
     }
-    
+
     .row-container .app-container .form-panel .btn-div {
         display: flex;
         justify-content: center;
+        padding: .5rem;
     }
-    
+
     .row-container .app-container .form-panel button {
         margin-top: .5rem;
         padding: .3rem .4rem;
@@ -73,44 +73,44 @@
         border: none;
         text-shadow: -1px -1px 0 #d9a575, 1px -1px 0 #d9a575, -1px 1px 0 #d9a575, 1px 1px 0 #d9a575;
     }
-    
+
     .row-container .app-container .stat-panel {
         display: none;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    
+
     .row-container .app-container .stat-panel .stat-table table {
         table-layout: fixed;
         padding-top: .5rem;
         width: 18rem;
     }
-    
-    .row-container .app-container .stat-panel .stat-table table th,
-    .row-container .app-container .stat-panel .stat-table table td {
+
+    .row-container .app-container .stat-panel .stat-table table th, .row-container .app-container .stat-panel .stat-table table td {
         font-family: 'Aclonica', sans-serif;
         text-align: center;
     }
-    
+
     .row-container .app-container .stat-panel .other-stats {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 18rem;
+        padding: .5rem;
     }
-    
+
     .row-container .app-container .stat-panel .other-stats table {
         table-layout: fixed;
         padding-top: .5rem;
         width: 15rem;
     }
-    
+
     .row-container .app-container .stat-panel .other-stats table td {
         font-family: 'Aclonica', sans-serif;
     }
-    
+
     .divider {
         height: 1px;
         width: 80%;
