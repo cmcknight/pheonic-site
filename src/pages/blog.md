@@ -5,6 +5,6 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | p
 pagination:
     data: collections.posts
     reverse: true
-    size: 2
+    size: 4
     alias: posts
 ---
