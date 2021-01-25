@@ -216,11 +216,28 @@ section .latest-posts .paragraphs article {
 }
 
 section .latest-posts .paragraphs article .home-page-title {
+    display: flex;
+    flex-direction: column;
+    color: white;
     border-bottom: var(--pheonic-blue) 1px solid;
     background: var(--pheonic-blue);
     border-top-left-radius: .3rem;
     border-top-right-radius: .3rem;
     padding: 0 .25rem;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 768px) {
+    section .latest-posts .paragraphs article .home-page-title {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+section .latest-posts .paragraphs article .home-page-title time {
+    color: white;
+    font-size: .8rem;
+    font-weight: bold;
 }
 
 section .latest-posts .paragraphs article .home-page-title a {
