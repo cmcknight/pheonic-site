@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
+    
+    <title>Eleventy: Filtering Custom Collections</title>
+</head>
+<body>
+
+
+
+<div class="site-container">
+    <div class="container">
+
+        <navbar>
+    <div class="navigation">
+        <div class="logo">
+            <a href="/"><img src="/img/pheonic-logo2.png"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/pages/topics/">Topics</a>
+                <li><a href="/pages/about/">About</a></li>
+            </ul>
+        </div>
+    </div>
+</navbar>
+
+        
+<div class="breadcrumbs">
+    
+    
+    
+        <a href="/">Home</a> &raquo;
+    
+    
+    
+        <a href="/blog/">Blog</a> &raquo;
+    
+    
+    
+        <span class="current">Eleventy: Filtering Custom Collections</span>
+    
+    
+</div>
+<div class="bottom-line"></div>
+
+
+
+        
+            <div class="blog-article-container">
+    <article>
+        <div class="article-header">
+            <h1>Eleventy: Filtering Custom Collections</h1>
+            <time datetime="2021-01-24T00:00:00.000Z">January 24, 2021</time>
+        </div>
+        <div class="post-content">
+            <p>Today I needed to create more pages for the <a href="https://farmerfrog.org">Farmer Frog</a> site that I am building in <a href="https://11ty.dev">Eleventy</a>. The site has a group of categories that have one or more posts associated with each category. Having recently discovered the joys of the <strong>before:</strong> property, I teed it up to solve this issue.</p>
+<p>The categories for each article are stored in the frontmatter:</p>
+<br>
+<pre><code>    ---
+    ...
+    category:
+      - Category 1
+      - Category 2
+      - etc.
+    ...
+    ---
+</code></pre>
+<br>
+<p>The first step in the process was to create a custom collection of posts that had categories (no point in having any posts that don't have categories). I used the following code to do that:</p>
+<br>
+<pre><code class="language-JS">    eleventyConfig.addCollection(&quot;categories&quot;, function(collectionApi) {
+        let myColl = [];
+        let posts = collectionApi.getAllSorted();
+
+        posts.forEach(post =&gt; {
+            if(post.data.category !== undefined) {
+                myColl.push(post);
+            }
+        });
+        return myColl;
+    });
+</code></pre>
+<br>
+<p>The next step was to set up the frontmatter for each category page:</p>
+<br>
+<pre><code>    ---js
+    {
+      title: [&quot;Blog : Category : My Category&quot;],
+      permalink: &quot;/categories/my-category//index.html&quot;,
+      layout: &quot;category.njk&quot;,
+      breadcrumbs: [ {label: &quot;Home&quot;, url: &quot;/&quot;}, {label: &quot;Blog&quot;, url: &quot;/blog/&quot;}, {label: &quot;My Category&quot;}],
+      pagination: {
+        data: &quot;collections.categories&quot;,
+        size: 4,
+        reverse: true,
+        alias: &quot;posts&quot;,
+        before: function(data) { return data.filter(post =&gt; post.data.category.includes('my category') === true )}
+      },
+    }
+    ---
+</code></pre>
+<br>
+<p>There may be a much more elegant way to do this, and if I find one I'll write it up!</p>
+<p>In any case, the lessons learned previously made the solution to this problem relatively effortless.</p>
+
+        </div>
+    </article>
+</div>
+        
+
+        <footer>
+        <p>Copyright &copy; 2020  Pheonic</p>
+        </footer>
+    </div>
+</div>
+
+    <script src="/js/scripts.js"></script>
+    
+
+</body>
+</html>
