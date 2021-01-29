@@ -5,7 +5,9 @@ layout: base-layout.njk
     <article>
         <div class="article-header">
             <h1>{{ title | safe }}</h1>
+            {% if show_date %}
             <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
+            {% endif %}
         </div>
         <div class="post-content">
             {{ content | safe }}

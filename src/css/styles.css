@@ -100,6 +100,10 @@ navbar .logo img {
     }
     navbar .logo img {
         margin: 0;
+        height: 7rem;
+        max-height: 7rem;
+        padding-top: 1rem;
+        padding-bottom: 0;
     }
     navbar .menu {
         float: right;
@@ -178,9 +182,6 @@ header .welcome p {
 
 section .latest-posts {
     display: block;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
     gap: .5rem;
     color: var(--charcoal);
     border-radius: .5rem;
@@ -199,8 +200,6 @@ section .latest-posts h2 {
 }
 
 section .latest-posts .paragraphs {
-    /* display: flex; */
-    /* flex-direction: column; */
     display: block;
     padding: .5rem;
 }
@@ -209,7 +208,6 @@ section .latest-posts .paragraphs article {
     color: var(--charcoal);
     background: var(--pheonic-parchment);
     border: 1px solid var(--pheonic-blue);
-    /* padding: .5rem; */
     border-radius: .5rem;
     margin-bottom: .5rem;
     font-family: 'Roboto', sans-serif;
@@ -319,6 +317,16 @@ section .latest-posts .more-link a {
     font-family: 'Roboto', sans-serif;
     font-size: .8rem;
     font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+    .blog-index-container article .article-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-end;
+    }
 }
 
 .project-index-container article .project-content, .blog-index-container article .post-content {
