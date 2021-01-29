@@ -2,6 +2,7 @@
 title: About
 permalink: /pages/about/
 layout: page-layout.njk
+show_date: false
 ---
 
 ## About the Site
