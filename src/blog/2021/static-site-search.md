@@ -170,5 +170,6 @@ function performSiteSearch(params) {
       .catch(err => console.log(err));
 }
 ```
+<p><br></p>
 When I get some open time, I will try to create a step by step tutorial that walks through the process, but hopefully the code proves to be helpful.
 
