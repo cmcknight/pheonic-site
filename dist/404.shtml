@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
+    
+    <title>Page Does Not Exist</title>
+</head>
+<body>
+
+
+
+<div class="site-container">
+    <div class="container">
+        <navbar>
+    <div class="navigation">
+        <div class="logo">
+            <a href="/"><img src="/img/pheonic-logo2.png"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/pages/topics/">Topics</a>
+                <li><a href="/pages/about/">About</a></li>
+            </ul>
+        </div>
+    </div>
+</navbar>
+
+        
+
+
+        
+            
+<h1 class="center-text">Um, something seems to have gone wrong...</h1>
+
+<div class="image-container center-text">
+  <img src="/img/404.png" alt="Cannot find page" />
+  <h2 class="center-text">That page doesn't seem to exist!</h2>
+</div>
+        
+
+        <footer>
+        <p>Copyright &copy; 2020  Pheonic</p>
+        </footer>
+    </div>
+</div>
+
+    <script src="/js/scripts.js"></script>
+    
+
+</body>
+</html>
