@@ -2,7 +2,7 @@ const moment = require("moment");
 
 moment.locale("en");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/js");
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/_data");
@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy(
         "src/pages/topics/game-aids/tunnels-and-trolls/chargen/css"
     );
+
     eleventyConfig.addPassthroughCopy(
         "src/pages/topics/game-aids/tunnels-and-trolls/chargen/js"
     );
@@ -36,6 +37,7 @@ module.exports = function(eleventyConfig) {
             includes: "partials_layouts",
         },
     };
+
 };
 
 function extractExcerpt(article) {
@@ -50,9 +52,14 @@ function extractExcerpt(article) {
     const content = article.templateContent;
 
     // The start and end separators to try and match to extract the excerpt
-    const separatorsList = [
-        { start: "<!-- Excerpt Start -->", end: "<!-- Excerpt End -->" },
-        { start: "<p>", end: "</p>" },
+    const separatorsList = [{
+        start: "<!-- Excerpt Start -->",
+        end: "<!-- Excerpt End -->"
+    },
+    {
+        start: "<p>",
+        end: "</p>"
+    },
     ];
 
     separatorsList.some((separators) => {
