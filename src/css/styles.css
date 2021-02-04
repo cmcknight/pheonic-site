@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,12 +21,6 @@
     --max-content-width: 50rem;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 html, body {
     /* background: #5d6d7e; */
     background: var(--pheonic-lightgrey);
@@ -34,7 +29,7 @@ html, body {
 pre {
     font-size: small;
     background: lightgrey;
-    padding: 1rem 0 .5rem;
+    padding: .5rem;
     margin: 0px 1rem;
     word-wrap: break-word;
     overflow: auto;
@@ -229,6 +224,8 @@ section .latest-posts .paragraphs article .home-page-title {
     section .latest-posts .paragraphs article .home-page-title {
         flex-direction: row;
         justify-content: space-between;
+        align-content: center;
+        align-items: flex-start;
     }
 }
 
@@ -325,7 +322,7 @@ section .latest-posts .more-link a {
         flex-direction: row;
         justify-content: space-between;
         align-content: center;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 }
 
