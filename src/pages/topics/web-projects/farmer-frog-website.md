@@ -1,12 +1,12 @@
 ---
 title: Farmer Frog Website
-permalink: /pages/topics/web-projects/farmer-frog/
+permalink: /topics/web-projects/farmer-frog/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home
     url: /
   - label: Topics
-    url: /pages/topics/
+    url: /topics/
   - label: Farmer Frog Website
 tags:
   - CSS

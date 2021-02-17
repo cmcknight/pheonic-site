@@ -1,15 +1,16 @@
 ---
 title: Makeblock mBot
-permalink: /pages/topics/makeblock/makeblock-mbot/
+permalink: /topics/makeblock/makeblock-mbot/
 layout: page-layout.njk
 breadcrumbs:
   - label: Home
     url: /
   - label: Topics
-    url: /pages/topics/
+    url: /topics/
   - label: Makeblock mBot
 tags:
   - mBot
+  - Robotics
 ---
 
 The [Makeblock mBot](http://makeblock.com/mbot) is one of the best kits I have seen for learning the basic of robotics. The kit is relatively inexpensive ($70 USD), making it ideal for STEM programs that wish to explore the field of robotics. The mBot mCore board is based on the Arduino Uno (Atmel 328P) and comes with the following sensors:

@@ -19,4 +19,4 @@ I'm working in Vanilla HTML/CSS/Javascript because I want to be well-versed in t
 
 In any case, Tunnels & Trolls by <a href="http://flyingbuffalo.com" target="_blank">Flying Buffalo</a> is one of the oldest fantasy role-playing games. In looking for a first small project, a simple character generator seemed to be about the right size, i.e., one that could be finished in a few hours. I make no claims to being a great web designer, but the functionality is there and as I dig deeper into the technologies I will likely continue to enhance it.
 
-If you'd like to have a look, you can see it [here](/pages/topics/game-aids/tunnels-and-trolls/chargen/).
+If you'd like to have a look, you can see it [here](/topics/game-aids/tunnels-and-trolls/chargen/).

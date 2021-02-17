@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /pages/about/
+permalink: /about/
 layout: page-layout.njk
 show_date: false
 ---

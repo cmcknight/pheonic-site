@@ -1,6 +1,6 @@
 ---
 title: Topics
-permalink: /pages/topics/
+permalink: /topics/
 layout: topical-index.njk
 breadcrumbs:
   - label: Home
@@ -9,25 +9,25 @@ breadcrumbs:
 cards:
   - card:
     title: Game Aids
-    url: /pages/topics/game-aids/
+    url: /topics/game-aids/
     items:
       - title: Tunnels & Trolls
-        url: /pages/topics/game-aids/tunnels-and-trolls/
+        url: /topics/game-aids/tunnels-and-trolls/
   - card:
     title: Robotics
     items:
       - title: Makeblock mBot
-        url: /pages/topics/makeblock/makeblock-mbot/
+        url: /topics/makeblock/makeblock-mbot/
   - card:
     title: Software Development
     items:
       - title: Desktop Projects
-        url: /pages/topics/desktop-projects/
+        url: /topics/desktop-projects/
       - title: Embedded Projects
-        url: /pages/topics/embedded-projects/
+        url: /topics/embedded-projects/
   - card:
     title: Web Projects
     items:
       - title: Farmer Frog
-        url: /pages/topics/web-projects/farmer-frog/
+        url: /topics/web-projects/farmer-frog/
 ---

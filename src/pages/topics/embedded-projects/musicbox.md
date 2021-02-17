@@ -1,14 +1,14 @@
 ---
 title: MusicBox for Arduino
-permalink: /pages/topics/embedded-projects/musicbox/
+permalink: /topics/embedded-projects/musicbox/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home
     url: /
   - label: Topics
-    url: /pages/topics/
+    url: /topics/
   - label: Embedded Projects
-    url: /pages/topics/embedded-projects/
+    url: /topics/embedded-projects/
   - label: MusicBox
 repo_link: https://github.com/senestone/MusicBox
 tags:
