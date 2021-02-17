@@ -56,7 +56,7 @@ pre {
     }
 }
 
-navbar .navigation {
+nav {
     display: flex;
     flex-direction: column;
     background: var(--pheonic-lightgrey);
@@ -69,14 +69,14 @@ navbar .navigation {
 }
 
 @media screen and (min-width: 768px) {
-    navbar .navigation {
+    nav {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 }
 
-navbar .logo img {
+nav .logo img {
     display: block;
     height: 6rem;
     max-height: 6rem;
@@ -85,38 +85,38 @@ navbar .logo img {
 }
 
 @media screen and (min-width: 768px) {
-    navbar .navigation {
+    nav {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
     }
-    navbar .logo {
+    nav .logo {
         float: left;
     }
-    navbar .logo img {
+    nav .logo img {
         margin: 0;
         height: 7rem;
         max-height: 7rem;
         padding-top: 1rem;
         padding-bottom: 0;
     }
-    navbar .menu {
+    nav .menu {
         float: right;
     }
 }
 
-navbar div.navigation ul {
+nav ul {
     padding-bottom: 1rem;
     width: 100%;
     max-width: 100%;
     list-style: none;
 }
 
-navbar div.navigation ul li {
+nav ul li {
     display: inline;
 }
 
-navbar div.navigation ul li a {
+nav ul li a {
     text-decoration: none;
     color: #fff;
     background: var(--pheonic-blue);
@@ -128,7 +128,7 @@ navbar div.navigation ul li a {
     font-size: .9rem;
 }
 
-navbar div.navigation ul li a:hover {
+nav ul li a:hover {
     color: var(--pheonic-gold);
 }
 
@@ -303,6 +303,7 @@ section .latest-posts .more-link a {
     font-family: 'Roboto', sans-serif;
 }
 
+
 .project-index-container article .project-content a, .project-index-container article .repo-link a, .project-container article .repo-link a, .blog-index-container article .post-content a {
     color: var(--pheonic-blue);
     text-decoration: none;
@@ -391,6 +392,13 @@ section .latest-posts .paragraphs article p.read-more-link a, .project-index-con
     padding-top: .5rem;
 }
 
+.project-container article .project-content h3, .blog-article-container article .post-content h2 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--charcoal);
+    font-size: 1rem;
+    padding-top: .5rem;
+}
+
 .project-container article .project-content p, .blog-article-container article .post-content p {
     color: var(--charcoal);
     font-family: 'Roboto', sans-serif;
@@ -404,7 +412,7 @@ section .latest-posts .paragraphs article p.read-more-link a, .project-index-con
     font-style: italic;
 }
 
-.project-container article .project-content uls, .project-container article .project-content ol, .project-containter article .project-tags, .blog-article-container article .post-content ul, .blog-article-container article .post-content ol {
+.project-container article .project-content ul, .project-container article .project-content ol, .project-containter article .project-tags, .blog-article-container article .post-content ul, .blog-article-container article .post-content ol {
     padding: .5rem 1.5em 0 1.5rem;
 }
 
@@ -427,6 +435,10 @@ section .latest-posts .paragraphs article p.read-more-link a, .project-index-con
     width: 1rem;
 }
 
+.project-container article .repo-link {
+    padding: .5rem;
+    text-align: right;
+}
 .blog-article-container article .post-content .blog-article-table {
     padding: 1rem 0;
 }
@@ -442,6 +454,8 @@ section .latest-posts .paragraphs article p.read-more-link a, .project-index-con
         width: 0;
     }
 }
+
+
 
 .blog-article-container article .post-content .blog-article-table table thead {
     border-bottom: 1px solid var(--charcoal);
@@ -601,6 +615,24 @@ footer {
 
 .center-text {
     text-align: center;
+}
+
+.center-image {
+    text-align: center;
+}
+
+.center-image img {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 7px;
+}
+
+@media screen and (min-width: 768px) {
+    .center-image img {
+        width: 25%;
+    }
 }
 
 [aria-current] {
