@@ -6,9 +6,9 @@ layout: base-layout.njk
         <div class="project-header">
             <h1>{{ title | safe }}</h1>
         </div>
-    {% if proj.data.repo_link %}
+    {% if repo_link %}
     <div class="repo-link">
-        <strong>Repository Link:</strong> <a href="{{ proj.data.repo_link | url }}">Github</a>
+        <strong>Github Repository:</strong> <a href="{{ repo_link | url }}">link</a>
     </div>
     {% endif %}
         <div class="project-content">
