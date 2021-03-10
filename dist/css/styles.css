@@ -38,10 +38,9 @@ html, body {
     letter-spacing: 1;
     max-width: 90%;
     margin: auto;
-    border: 1px solid var(--charcoal);
     padding: .5rem;
     border-radius: .35rem;
-    background: var(--pheonic-parchment);
+    background: lightgrey;
 }
 
 pre {

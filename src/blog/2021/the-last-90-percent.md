@@ -2,7 +2,7 @@
 title: The Last 90 Percent
 permalink: /blog/2021/{{title | slug }}/
 layout: blog-article-layout.njk
-date: 2021-02-16
+date: 2021-03-09
 breadcrumbs:
     - label: Home
       url: /
@@ -13,6 +13,7 @@ tags:
   - posts
 ---
 
+<!-- Excerpt Start -->
 Tom Cargill of Bell Labs is credited with the creation of the 90/90 rule for software development. The rule is:
 
 <div class="blockquote">
@@ -20,6 +21,7 @@ Tom Cargill of Bell Labs is credited with the creation of the 90/90 rule for sof
 The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.
   </div>
 </div>
+<!-- Excerpt End -->
 
 I've been writing software for a very long time and I think Tom may have understimated. That being said I've spoken with a lot of developers about "_the last 90 percent_" with regard to what they do during the last 90 percent. The number one thing that seems to be left for the bitter end is documentation. While I do spend time editing the documentation towards the end, I'm always writing it as I go.
 
