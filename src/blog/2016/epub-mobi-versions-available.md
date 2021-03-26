@@ -1,6 +1,6 @@
 ---
 title: .ePub/.mobi Versions Available
-permalink: /blog/epub-mobi-versions-available/
+permalink: /blog/{{ title | slug}}/
 layout: blog-article-layout.njk
 date: 2016-06-20
 breadcrumbs:
