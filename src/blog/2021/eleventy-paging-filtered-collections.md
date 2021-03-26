@@ -18,66 +18,48 @@ I have mentioned in the past that I am using [Eleventy](https://11ty.dev) for th
 
 Everything was sailing right along until the time came to create custom collections of articles associated with an author. On a single-author blog, this wouldn't be an issue, but there are several authors on the Farmer Frog blog so I needed a way to create a collection of posts for each author. My initial take was to try to create a custom collection:
 
-<br>
+```    
+eleventyConfig.addCollection('authorPosts', function(collectionApi) {
+  let myColl = [];
+  let posts = collectionApi.getFilteredByTag('posts');
+  
+  // build array of author post objects
+  posts.forEach(post => {
+      if (myColl.length == 0) {
+          // add new author object
+          const authObj = { author: post.data.author, posts: [post]};
+          myColl.push(authObj);
+      } else {
+          let obj = myColl.find(x => x.author === post.data.author);
+          if (obj === undefined) {
+              // add new author object
+              const authObj = { author: post.data.author, posts: [post]};
+              myColl.push(authObj);
+              } else {
+              // push item onto object's posts array
+              obj.posts.push(post);
+          }
+      }
+  });
 
-<div>
-  <pre>
-    eleventyConfig.addCollection('authorPosts', function(collectionApi) {
-        let myColl = [];
-        let posts = collectionApi.getFilteredByTag('posts');
-        
-        // build array of author post objects
-        posts.forEach(post => {
-            if (myColl.length == 0) {
-                // add new author object
-                const authObj = { author: post.data.author, posts: [post]};
-                myColl.push(authObj);
-            } else {
-                let obj = myColl.find(x => x.author === post.data.author);
-                if (obj === undefined) {
-                    // add new author object
-                    const authObj = { author: post.data.author, posts: [post]};
-                    myColl.push(authObj);
-                    } else {
-                    // push item onto object's posts array
-                    obj.posts.push(post);
-                }
-            }
-        });
-
-        // console.log(myColl);
-        return myColl;
-    });
-  </pre>
-</div>
-
-<br> 
+  // console.log(myColl);
+  return myColl;
+});
+```
 
 Which creates a dictionary<sup id="fnote1"><a href="#fn1">1</a></sup> of author objects that contains an array of the posts by the author (see below):
 
-<br>
-
-<div>
-  <pre>
+```
     {author: "author name":, posts: [{post1}, {post2}, ...]}
-  </pre>
-</div>
-
-<br>
+```
 
 However, in practice this broke pagination and I didn't want to have to reinvent the wheel for that so then I looked at just filtering the posts on the spot by using a filter:
 
-<br>
-
-<div>
-  <pre>
+```
     eleventyConfig.addFilter("byAuthor", function(posts, author) {
         return posts.filter(post => post.data.author === author);
     });
-  </pre>
-</div>
-
-<br>
+```
 
 This created a different type of pagination breakage where I'd only get the first article on each page and if I set the size to 1 the whole thing would throw an error.
 
@@ -93,10 +75,7 @@ Why? Because Nunjucks apparently won't let you do that. Grrrrr.....
 
 So I wound up rewriting the frontmatter from this:
 
-<br>
-
-<div>
-  <pre>
+```
     {% raw %}
     ---
     title: "Blog"
@@ -118,15 +97,11 @@ So I wound up rewriting the frontmatter from this:
     }
     ---
     {% endraw %}
-  </pre>
-</div>
-<br>
+```
 
 to this:
 
-<br>
-
-  <pre>
+```
     {% raw %}
     ---js
     {
@@ -150,29 +125,19 @@ to this:
     }
     ---
     {% endraw %}
-</pre>
-
-<br>
+```
 
 I also modified the template from this:
 
-<br>
-
-  <pre class="center-text">
+```
     {% raw %}{% for post in posts | byAuthor( author) %}{% endraw %}
-  </pre>
-
-<br>
+```
 
 to this:
 
-<br>
-
-  <pre class="center-text">
+```
     {% raw %}{% for post in posts %}{% endraw %}
-  </pre>
-
-<br>
+```
 
 Finally! It works as expected. To be honest, I was half-expecting that it might require a plugin or that I'd have to write something specific because 11ty is still relatively young and is under constant development so finding the **before:** property made my task much simpler.
 
