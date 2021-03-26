@@ -7,12 +7,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/_data");
     eleventyConfig.addPassthroughCopy("src/img");
-    eleventyConfig.addPassthroughCopy(
-        "src/topics/game-aids/tunnels-and-trolls/chargen/css"
-    );
+    eleventyConfig.addPassthroughCopy({
+        "src/pages/topics/game-aids/tunnels-and-trolls/chargen/css": "topics/game-aids/tunnels-and-trolls/chargen/css"
+    });
 
-    eleventyConfig.addPassthroughCopy(
-        "src/topics/game-aids/tunnels-and-trolls/chargen/js"
+    eleventyConfig.addPassthroughCopy({
+        "src/pages/topics/game-aids/tunnels-and-trolls/chargen/js": "topics/game-aids/tunnels-and-trolls/chargen/js"
+        }
     );
     eleventyConfig.setQuietMode(true);
     eleventyConfig.addFilter("dateIso", (date) => {
