@@ -18,8 +18,6 @@ Today I needed to create more pages for the [Farmer Frog](https://farmerfrog.org
 
 The categories for each article are stored in the frontmatter:
 
-<br>
-
 ```
     ---
     ...
@@ -30,13 +28,11 @@ The categories for each article are stored in the frontmatter:
     ...
     ---
 ```
-<br>
 
 The first step in the process was to create a custom collection of posts that had categories (no point in having any posts that don't have categories). I used the following code to do that:
 
-<br>
-
-```JS
+```
+---js
     eleventyConfig.addCollection("categories", function(collectionApi) {
         let myColl = [];
         let posts = collectionApi.getAllSorted();
@@ -49,11 +45,9 @@ The first step in the process was to create a custom collection of posts that ha
         return myColl;
     });
 ```
-<br>
 
 The next step was to set up the frontmatter for each category page:
 
-<br>
 
 ```
     ---js
@@ -72,7 +66,6 @@ The next step was to set up the frontmatter for each category page:
     }
     ---
 ```
-<br>
 
 There may be a much more elegant way to do this, and if I find one I'll write it up!
 
