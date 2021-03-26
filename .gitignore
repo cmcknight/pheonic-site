@@ -1,9 +1,8 @@
 node_modules/*
 Scratch
 package.json
-dist/css/styles-retro.css
 src/.DS_Store
-src/css/styles-retro.css
 src/img/.DS_Store
 .vscode/settings.json
 .DS_Store
+dist/
