@@ -47,9 +47,10 @@ pre {
     font-size: small;
     background: lightgrey;
     padding: .5rem;
-    margin: 0px 1rem;
+    margin: 1rem 1rem;
     word-wrap: break-word;
     overflow: auto;
+    max-height: 40rem;
 }
 
 .site-container {
