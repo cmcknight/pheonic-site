@@ -23,8 +23,6 @@ I initially looked at [lunr.js](https://lunrjs.com) and [elasticlunr.js](elastic
 
 At this point, my options were to index the Markdown source files or the generated HTML files. While either is relatively easy to do, I opted for the HTML files and used the [cheerio](https://cheeriojs.org) HTML parser to build the index. The following code seems to do the trick:
 
-<p><br></p>
-
 ```
 // build a list of the Markdown files for the index
 const glob = require ('glob');
@@ -99,9 +97,9 @@ fs.writeFile(OUTPUT_DIR + '/searchIndex.json', JSON.stringify(jsonDocs), functio
 //   console.log(jsonDocs[item.id].title);
 // });
 ```
-<p><br></p>
+
 Now it was time to create the Javascript for the site to use minisearch. I'm still relatively new to Javascript, but the code below seems to work as I expect. I chose to rewrite the content body of the home page that exists between the navigation menu and the footer with the results of the search, and I made that div scrollable. Other than a few media queries to change font size, the code worked fine and it's pretty quick!
-<p><br></p>
+
 
 ```
 const searchButton = document.getElementById('search-btn');
@@ -170,6 +168,6 @@ function performSiteSearch(params) {
       .catch(err => console.log(err));
 }
 ```
-<p><br></p>
+
 When I get some open time, I will try to create a step by step tutorial that walks through the process, but hopefully the code proves to be helpful.
 
