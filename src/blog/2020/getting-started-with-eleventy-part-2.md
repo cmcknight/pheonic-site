@@ -165,7 +165,6 @@ We can now change the _\_head.njk_ partial to use the title from the frontmatter
 
 Note that we have replaced the string "My Home Page" with \{\{ \}\} tags that contain the variable _title_. The value of _title_ is pulled from the frontmatter variable named _title_. When the browser refreshes, you should still see My Home Page in the tab for the page and in the title bar. This capability reduces the effort required to create/manage pages and is heavily used in the main Farmer Frog website as well as this doc site.
 
-
 ## The About Page
 
 The home page, sometimes called the landing page, generally has a format that is much different than the rest of the pages on the site. What may not be obvious at first glance, is that the two sections on the home page should actually be a blogroll that gets updated whenever a new post is added to the site. We'll hold off on that for right now so that we can focus on creating the About page.
