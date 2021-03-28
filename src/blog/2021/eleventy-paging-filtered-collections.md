@@ -1,6 +1,6 @@
 ---
 title: "Eleventy: Paging Filtered Collections"
-permalink: /blog/2021/eleventy-paging-filtered-collections/
+permalink: /blog/2021/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2021-01-22
 breadcrumbs:

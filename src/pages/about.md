@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /about/
+permalink: /{{ title | slug }}/
 layout: page-layout.njk
 show_date: false
 ---
@@ -8,6 +8,8 @@ show_date: false
 ## About the Site
 
 This site has been built using a static site generator named Eleventy. As a personal site, it is intended to showcase and share the various topics I am interested in or create.
+
+If you have any questions or comments, feel free to [write](mailto:blog@pheonic.com).
 
 ## About Me
 

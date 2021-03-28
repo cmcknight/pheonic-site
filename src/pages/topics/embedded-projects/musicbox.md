@@ -1,6 +1,6 @@
 ---
 title: MusicBox for Arduino
-permalink: /topics/embedded-projects/musicbox/
+permalink: /topics/embedded-projects/{{ title | slug }}/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home

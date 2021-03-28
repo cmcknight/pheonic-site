@@ -1,6 +1,6 @@
 ---
 title: The Book (in PDF format) is Out!
-permalink: /blog/2016/the-book-in-pdf-format-is-out/
+permalink: /blog/2016/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2016-05-06
 breadcrumbs:

@@ -1,6 +1,6 @@
 ---
 title: The Trials and Tribulations of Authorship
-permalink: /blog/the-trials-and-tribulations-of-authorship/
+permalink: /blog/2016/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2016-04-16
 breadcrumbs:

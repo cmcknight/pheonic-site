@@ -1,7 +1,7 @@
 ---
 title: Desktop Projects
 layout: projects-layout.njk
-permalink: "/topics/desktop-projects/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
+permalink: "/topics/{{ title | slug }}/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
 pagination:
     data: collections.Desktop
     reverse: true

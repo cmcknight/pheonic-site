@@ -1,6 +1,6 @@
 ---
 title: "Eleventy: Filtering Custom Collections"
-permalink: /blog/2021/eleventy-filtering-custom-collections/
+permalink: /blog/2021/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2021-01-24
 breadcrumbs:

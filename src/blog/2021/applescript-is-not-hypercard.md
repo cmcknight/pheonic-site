@@ -1,6 +1,6 @@
 ---
 title: Applescript is not Hypercard
-permalink: /blog/2021/applescript-is-not-hypercard/
+permalink: /blog/2021/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2021-01-07
 breadcrumbs:

@@ -1,6 +1,6 @@
 ---
 title: Makeblock mBot
-permalink: /topics/makeblock/makeblock-mbot/
+permalink: /topics/makeblock/{{ title | slug }}/
 layout: page-layout.njk
 breadcrumbs:
   - label: Home

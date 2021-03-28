@@ -1,7 +1,7 @@
 ---
 title: Maze Solving with the mBot - Part 2
 layout: blog-article-layout.njk
-permalink: /blog/2016/maze-solving-with-the-mbot-part-2/
+permalink: /blog/2016/{{ title | slug }}/
 date: 2016-01-26
 breadcrumbs:
     - label: Home

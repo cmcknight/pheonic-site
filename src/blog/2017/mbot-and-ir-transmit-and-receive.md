@@ -1,6 +1,6 @@
 ---
 title: mBot and IR Transmit and Receive
-permalink: /blog/mbot-and-ir-transmit-and-receive/
+permalink: /blog/2017/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2017-07-12
 breadcrumbs:

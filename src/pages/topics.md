@@ -1,6 +1,6 @@
 ---
 title: Topics
-permalink: /topics/
+permalink: /{{ title | slug }}/
 layout: topical-index.njk
 breadcrumbs:
   - label: Home

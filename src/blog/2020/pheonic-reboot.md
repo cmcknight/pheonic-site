@@ -1,6 +1,6 @@
 ---
 title: Pheonic Reboot!
-permalink: /blog/2020/pheonic-reboot/
+permalink: /blog/2020/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2020-12-16
 breadcrumbs:

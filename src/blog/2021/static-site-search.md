@@ -1,6 +1,6 @@
 ---
 title: Static Site Search
-permalink: /blog/2021/static-site-search/
+permalink: /blog/2021/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2021-01-29
 breadcrumbs:

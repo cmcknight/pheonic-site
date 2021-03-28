@@ -1,6 +1,6 @@
 ---
 title: ActionTimer for Arduino
-permalink: /topics/embedded-projects/action-timer/
+permalink: /topics/embedded-projects/{{ title | slug }}/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home

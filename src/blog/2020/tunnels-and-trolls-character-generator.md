@@ -1,6 +1,6 @@
 ---
 title: Tunnels & Trolls Character Generator
-permalink: /blog/2020/tunnels-and-trolls-character-generator/
+permalink: /blog/2020/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2020-12-26
 breadcrumbs:

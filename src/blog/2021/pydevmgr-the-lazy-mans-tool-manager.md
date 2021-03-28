@@ -1,6 +1,6 @@
 ---
 title: PyDevMgr - The Lazy Man's Tool Manager
-permalink: /blog/2021/pydevmgr-the-lazy-mans-tool-manager/
+permalink: /blog/2021/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2021-02-13
 breadcrumbs:

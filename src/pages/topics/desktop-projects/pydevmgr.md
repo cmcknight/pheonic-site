@@ -1,6 +1,6 @@
 ---
 title: PyDevMgr - Python Development Manager
-permalink: /topics/desktop-projects/pydevmgr/
+permalink: /topics/desktop-projects/{{ title | slug }}/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home

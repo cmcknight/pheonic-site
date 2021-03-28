@@ -80,7 +80,7 @@ const del = require('del');
 
 ## Render Task
 
-Following the module declarations, we come to the first gulp private task, _render_. The _render_ task launches Eleventy in a child process and renders the site to the build folder<a href="#fn1" name="fnote1"><sup>[1]</sup></a> (the folder name is specified in the _.eleventy.js_ file).
+Following the module declarations, we come to the first gulp private task, _render_. The _render_ task launches Eleventy in a child process and renders the site to the build folder<a href="#fn1" id="fnote1"><sup>[1]</sup></a> (the folder name is specified in the _.eleventy.js_ file).
 
 ```
 // Use Eleventy to generate the site in the 'build' folder
@@ -404,4 +404,4 @@ I do not claim to be a master of Gulp nor Javascript and there are likely more i
 
 <br>
 <hr style="width: 20rem;">
-<sup name="fn1">[1]</sup> The name <em>build</em> is used so that the developers are able to test their changes. Gulp will be used to generate the production deployment and creates the <em>dist</em> folder for that output. <a href="#fnote1">&larrhk;</a>
+<sup id="fn1">[1]</sup> The name <em>build</em> is used so that the developers are able to test their changes. Gulp will be used to generate the production deployment and creates the <em>dist</em> folder for that output. <a href="#fnote1">&larrhk;</a>

@@ -1,6 +1,6 @@
 ---
 title: Inter-mBot Infrared Communication Achieved
-permalink: /blog/inter-mbot-infrared-communication-achieved/
+permalink: /blog/2018/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2018-03-26
 breadcrumbs:

@@ -1,7 +1,7 @@
 ---
 title: Getting Started With Eleventy Part 3
 layout: blog-article-layout.njk
-permalink: /blog/{{ title | slug }}/
+permalink: /blog/2020/{{ title | slug }}/
 date: 2020-12-20
 breadcrumbs:
   - label: Home

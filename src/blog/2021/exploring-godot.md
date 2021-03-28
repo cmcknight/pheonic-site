@@ -1,6 +1,6 @@
 ---
 title: Exploring Godot
-permalink: /blog/2021/exploring-godot/
+permalink: /blog/2021/{{ title | slug }}/
 layout: blog-article-layout.njk
 date: 2021-01-19
 breadcrumbs:

@@ -1,7 +1,7 @@
 ---
 title: FTC Robotics
 layout: blog-article-layout.njk
-permalink: /blog/2017/ftc-robotics/
+permalink: /blog/2017/{{ title | slug }}/
 date: 2017-01-28
 breadcrumbs:
     - label: Home
