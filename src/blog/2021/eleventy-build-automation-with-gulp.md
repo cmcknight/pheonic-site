@@ -85,7 +85,7 @@ Following the module declarations, we come to the first gulp private task, _rend
 ```
 // Use Eleventy to generate the site in the 'build' folder
 const render = () => {
-  return cp.spawn("npx", ["eleventy", "--quiet"], {
+  return cp.spawn("npx", ["eleventy", "--quiet"], { shell: true,
     stdio: "inherit"
   });
 };
