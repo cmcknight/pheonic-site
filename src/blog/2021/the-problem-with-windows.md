@@ -25,7 +25,7 @@ After spending some time reviewing their issues I came upon the following:
 
 Sigh...
 
-So the first issue with the reserved characters in a filename was relatively simple to fix. I say relatively, because I _thought_ I could just use the Nunjucks _replace()_ filter and send in a regex. However, I couldn't find a way to get that to fly because there is an embedded double-quote (") that even escaping wouldn't fix. I'm pretty sure the Nunjucks filter sits atop the Javascript _replace()_ function, so I wrote a quick filter:
+So the first issue with the reserved characters in a filename was relatively simple to fix. I say relatively, because I _thought_ I could just use the Nunjucks _replace()_ filter and send in a regex. However, I couldn't find a way to get that to fly because there is an embedded double-quote (") that even escaping wouldn't fix. I'm pretty sure the Nunjucks filter sits atop the Javascript _replace()_ function, so I wrote a quick filter<sup>*</sup>:
 
 ```
     // create filter to remove characters that are invalid for
@@ -52,6 +52,8 @@ to:
 {{ title | windowsFilenameFilter | slug }}
 {%- endraw -%}
 ```
+
+<sup>*</sup>Yes, I know I could likely have used urlencode but it was an excuse to fiddle around wih
 
 Okay, one down, one to go. Having just learned [Gulp](gulpjs.org) I was surprised to hear that it was acting up on Windows so off I went to find a Windows machine I could test on to see what was happening. It turned out to be a combination of things:
 
