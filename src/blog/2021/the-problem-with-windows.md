@@ -53,7 +53,7 @@ to:
 {%- endraw -%}
 ```
 
-<sup>*</sup>Yes, I know I could likely have used urlencode but it was an excuse to fiddle around wih
+<sup>*</sup>Yes, I know I could likely have used urlencode but it was an excuse to fiddle around with yet another filter because I think urlencoded URLs are just flat out ugly...
 
 Okay, one down, one to go. Having just learned [Gulp](gulpjs.org) I was surprised to hear that it was acting up on Windows so off I went to find a Windows machine I could test on to see what was happening. It turned out to be a combination of things:
 
