@@ -1,6 +1,6 @@
 node_modules/*
 Scratch
-package.json
+package-lock.json
 src/.DS_Store
 src/img/.DS_Store
 .vscode/settings.json
