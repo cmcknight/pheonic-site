@@ -13,9 +13,11 @@ tags:
   - posts
 ---
 
+<!-- Excerpt Start -->
 So I am down to the last few odds and ends on the [Farmer Frog](https://farmerfrog.org) site migration from [Wordpress](https://wordpress.com) to a static site built with [Eleventy](https://11ty.dev) and the last big feature is the ability to do a full-text site search.
 
 This is actually a bit trickier than it might appear at first glance. A static site differs from one built atop an application server because there is no application server. (Yes, I hear all of you saying, 'Well, duh!').
+<!-- Excerpt End -->
 
 So what does that entail? Well, first off the site pages will need to be indexed when the site is built and that index will have to be deployed with the site. Size may well become an issue depending on the number of pages and the size of those pages. Why is that an issue? Because that index will be loaded by the browser.
 
