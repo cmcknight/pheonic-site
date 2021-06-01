@@ -14,7 +14,9 @@ tags:
   - Eleventy
 ---
 
+<!-- Excerpt Start -->
 Today I needed to create more pages for the [Farmer Frog](https://farmerfrog.org) site that I am building in [Eleventy](https://11ty.dev). The site has a group of categories that have one or more posts associated with each category. Having recently discovered the joys of the **before:** property, I teed it up to solve this issue.
+<!-- Excertp End -->
 
 The categories for each article are stored in the frontmatter:
 

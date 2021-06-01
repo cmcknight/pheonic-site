@@ -13,7 +13,9 @@ tags:
   - posts
 ---
 
+<!-- Excerpt Start -->
 Building a site with Eleventy is pretty slick and relatively simple, but when you are ready to deploy your content you really need to do some cleanup, minfiication, etc., to ensure that you are using as little bandwidth and storage as possible. You _could_ do that manually every time or build scripts to do that, but there is a better answer if you are somewhat familiar with Javascript:  [Gulp](https://gulpjs.org).
+<!-- Excerpt End -->
 
 Gulp is a task runner that essentially is like a makefile utility. The tasks are defined in a file named _gulpfile.js_. Rather than bore the reader with a long, theoretical monologue, let me provide an example of a gulpfile that I just completed for the documentation site I built for [Farmer Frog](https://farmerfrog.org). This walkthrough assumes you are familiar with Javascript.
 

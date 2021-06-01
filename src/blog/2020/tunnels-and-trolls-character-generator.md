@@ -13,7 +13,9 @@ tags:
   - posts
 ---
 
+<!-- Excerpt Start -->
 One of the things I have always done to cement my knowledge in a programming language or environment is to write small applications using that language or in the particular environment. I have recently had to take up web development and thanks to Brad Traversy's courses on <a href="https://www.udemy.com/courses/search/?src=ukw&q=brad+traversy" target="_blank">Udemy</a> it has been a relatively painless experience. Okay, somewhat painless. There is still a world of difference in programming a web application that has to work across the multitude of screen sizes that are available today.
+<!-- Excerpt End -->
 
 I'm working in Vanilla HTML/CSS/Javascript because I want to be well-versed in those items, Javascript especially because everyone seems to learn a framework with no understanding of what goes on underneath and that has always been something of a cocktail for disaster in my experience (yours may vary, of course).
 

@@ -13,7 +13,9 @@ tags:
   - posts
 ---
 
+<!-- Excerpt Start -->
 I've been asked to add authentication to protect certain resources on a static site. At first, I kept thinking, "um, static site, no backend server" and wondered how it might be possible to do that. Fortunately, AWS offers an authentication service that can be accessed via a Javascript call. Problem solved, I thought, until upon further investigation it seemed that the Javascript library offered by AWS is for React.
+<!-- Excerpt End -->
 
 Sigh...
 

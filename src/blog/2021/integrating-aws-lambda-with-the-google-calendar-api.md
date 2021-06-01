@@ -13,7 +13,9 @@ tags:
   - posts
 ---
 
+<!-- Excerpt Start -->
 A funny thing happened on the way to reaching code complete on the Farmer Frog website. I needed to integrate an AWS Lambda function with the Google Calendar API. Now, you might ask yourself why I would need to do that, and it's a fair question. The short answer is that the website needs to be able to retrieve and display the public events without taking the user away from the website.
+<!-- Excerpt End -->
 
 The particular calendar that I needed to integrate with is set up as a public service-type Calendar which only requires an API key and knowledge of the endpoint instead of the usual OAuth 2 authentication. Having just finished getting the contact form working thanks to Kyle Galbraith's [_How to Host, Secure, and Deliver Static Websites on Amazon Web Services_](https://kylegalbraith.com/learn-aws/), I thought it would be a simple matter of essentially writing a microservice. I was somewhat correct and somewhat naive (okay, I was wrong, geez!). Here follows the bloody saga of getting the microservice written and operational.
 

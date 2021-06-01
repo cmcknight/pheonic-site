@@ -13,7 +13,9 @@ tags:
     - posts
 ---
 
+<!-- Excerpt Start -->
 Having taught a class or two using the mBot, I decided that it would be a "Good Idea" to capture things into an ebook which I've titled "A Gentle Introduction to Robotics." It should be available by the end of April barring any unforeseen circumstances and I'm trying to keep the price around $17.50 USD by going through Leanpub. All of the proceeds from the sale will go into an account to fund local robotics teams so if you want to help out future roboticists you can think about buying a copy. Or two. I'm also working with Leanpub to be able to make bulk discounts and/or discount coupons available for teachers and clubs.
+<!-- Excerpt End -->
 
 The surprising part of this adventure into authorship is the level of self-discipline it requires when you are a full-time father, husband, and consultant. When you are writing a book in the moments between the other three primary jobs it becomes challenging to get into a flow. However, if it was easy I guess everyone would do it.
 

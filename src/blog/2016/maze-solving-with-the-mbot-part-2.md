@@ -13,12 +13,14 @@ tags:
     - posts
 ---
 
-<!-- Excerpt Start --> OK, so I've learned lots about the mBot and mBlock programming since my last post.
+<!-- Excerpt Start -->
+OK, so I've learned lots about the mBot and mBlock programming since my last post.
 
 ### The Good
 
 It is possible, with patience, to write highly readable programs in mBlock (Scratch 2.0).
-The Makeblock team keeps improving mBlock.<!-- Excerpt End -->
+The Makeblock team keeps improving mBlock.
+<!-- Excerpt End -->
 
 ### The Not So Good
 

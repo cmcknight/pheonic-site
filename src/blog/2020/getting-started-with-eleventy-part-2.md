@@ -15,9 +15,11 @@ tags:
 ---
 ## Overview
 
+<!-- Excerpt Start -->
 This tutorial continues by converting the home page from a plain HTML file to one that is based on Nunjucks templates. This article was written with a slant towards Visual Studio Code as the development editor. If you are using something else (Atom, Sublime, etc.) you will need work out the steps for your environment.
 
 (All source code is available at [Github <i class="fa fa-link fa-1x"></i>](https://github.com/cmcknight/learning-eleventy))
+<!-- Excerpt End -->
 
 ## Partials and Layouts
 

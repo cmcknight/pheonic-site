@@ -14,7 +14,9 @@ tags:
   - Eleventy
 ---
 
+<!-- Excerpt Start -->
 I have mentioned in the past that I am using [Eleventy](https://11ty.dev) for this blog and to build a site for a non-profit organization, [Farmer Frog](https://farmerfrog.org), that distributes food donations to 1.5+ million people across the Pacific Northwest. The blog is sort of my sandbox for testing things before I incorporate them into the Farmer Frog site. Farmer Frog had a blog at one point that was dropped because it was not getting many views. However there are some interesting articles on the blog so I have resuscitated it as part of the move from Wordpress to Eleventy.
+<!-- Excerpt End -->
 
 Everything was sailing right along until the time came to create custom collections of articles associated with an author. On a single-author blog, this wouldn't be an issue, but there are several authors on the Farmer Frog blog so I needed a way to create a collection of posts for each author. My initial take was to try to create a custom collection:
 

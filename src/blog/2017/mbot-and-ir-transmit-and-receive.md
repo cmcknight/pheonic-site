@@ -13,7 +13,9 @@ tags:
     - posts
 ---
 
+<!-- Excerpt Start -->
 In my first book I avoided the IR Transmit and Receive devices other than using the included IR remote that comes with the mBot. Some of that had to do with not being able to get the test programs in Scratch to work, but a lot of it was more because I couldn't think of an application for a single mBot. That's still the case, but I've got an idea for an application with two or more mBots that will appear in volume 2 of the "A Gentle Introduction to Robotics" series. That being said, I wanted to share a couple of test apps that I've written  so that you can go forth and be creative if you have a couple of mBots (and really, who wouldn't want to have two?).
+<!-- Excerpt End -->
 
 This is a simple IR Receive program:
 

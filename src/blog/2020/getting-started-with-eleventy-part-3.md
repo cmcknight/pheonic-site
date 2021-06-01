@@ -15,9 +15,11 @@ tags:
 ---
 ## Overview
 
+<!-- Excerpt Start -->
 In this tutorial we will cover creating layouts for a blog post, front page blog roll (as a partial), and the main blog page.
 
 (All source code is available at [Github <i class="fa fa-link fa-1x"></i>](https://github.com/cmcknight/learning-eleventy))
+<!-- Excerpt End -->
 
 ## The Blog Post Page
 

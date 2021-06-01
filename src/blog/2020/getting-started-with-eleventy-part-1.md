@@ -13,11 +13,14 @@ tags:
   - posts
   - eleventy
 ---
+
 ## Overview
 
+<!-- Excerpt Start -->
 This tutorial provides a simple walkthrough to set up the Eleventy development environment and create a simple site. This article was written with a slant towards Visual Studio Code as the development editor. If you are using something else (Atom, Sublime, etc.) you will need work out the steps for your environment.
 
 (All source code is available at [Github <i class="fa fa-link fa-1x"></i>](https://github.com/cmcknight/learning-eleventy))
+<!-- Excerpt End -->
 
 ## Setting up the Environment
 Eleventy requires several tools to be installed before you can begin to work with the static site generator. See the [Development Environment Setup](/development/dev-env-setup/) article for those details. You can skip the step for sending your email to the technical lead because the Git repository used for this example is a public repository.
