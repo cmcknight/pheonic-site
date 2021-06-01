@@ -13,7 +13,9 @@ tags:
     - posts
 ---
 
+<!-- Excerpt Start -->
 This was one of those scratch an itch projects because I have a lot of development projects that I do both professionally and as a hobby. Rather than try to remember where everything is and which tools I used to build them, I wrote PyDevMgr to keep track of that for me. I'm a huge fan of Albert Einstein's notion that I shouldn't have to remember all of the details, just where the details are stored (translation: I'm lazy).
+<!-- Excerpt End -->
 
 So off I went and built PyDevMgr in Python 3.9 and wxPython so that I could use it on whatever platorm I happen to be on (and yes, I work across multiple operating systems so that's a necessity for me). After some time on the whiteboard, I settled on a two screen design that leans heavily towards simplicity.
 
