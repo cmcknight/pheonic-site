@@ -315,6 +315,7 @@ section .latest-posts .more-link a {
 
 .project-index-container article .project-content p, .blog-index-container article .post-content p {
     padding-bottom: 1rem;
+    text-indent: 1.5rem;
 }
 
 .project-index-container article .article-header h2 a, .blog-index-container article .article-header h2 a {
@@ -423,6 +424,7 @@ section .latest-posts .paragraphs article p.read-more-link a, .project-index-con
     color: var(--charcoal);
     font-family: 'Roboto', sans-serif;
     padding-top: .5rem;
+    text-indent: 1.5rem;
 }
 
 .project-container article .project-content a, .blog-article-container article .post-content a {
