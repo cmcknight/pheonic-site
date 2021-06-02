@@ -1,18 +1,14 @@
 const moment = require('moment');
+// const fs = require('fs')
 
 moment.locale('en');
 
+
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addPassthroughCopy({'src/projects/**/css':'build/projects'})
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/css');
-  eleventyConfig.addPassthroughCopy({
-    'src/pages/topics/game-aids/tunnels-and-trolls/chargen/css':
-      'topics/game-aids/tunnels-and-trolls/tunnels-and-trolls-character-generator/css',
-  });
-  eleventyConfig.addPassthroughCopy({
-    'src/pages/topics/game-aids/tunnels-and-trolls/chargen/js':
-      'topics/game-aids/tunnels-and-trolls/tunnels-and-trolls-character-generator/js',
-  });
   eleventyConfig.addPassthroughCopy('src/_data');
   eleventyConfig.addPassthroughCopy('src/img');
 
@@ -20,6 +16,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('dateIso', (date) => {
     return moment(date).toISOString();
   });
+
+  eleventyConfig.addFilter('setCopyright', (copyright) => {
+    let now = new Date();
+    let currentYear = now.getFullYear()
+    copyright = `${copyright} - ${currentYear}`
+    return (copyright)
+  })
 
   eleventyConfig.addFilter('dateReadable', (date) => {
     return moment(date).utc().format('LL');
@@ -33,7 +36,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      output: 'dist',
+      output: 'build',
       input: 'src',
       data: '_data',
       includes: 'partials_layouts',
