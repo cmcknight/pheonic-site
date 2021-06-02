@@ -1,0 +1,26 @@
+---
+layout: base-layout.njk
+---
+
+
+<div class="topical-index-container">
+    <header>
+        <div class="page-title">
+            <h1>Projects</h1>
+        </div>
+    </header>
+    <div class="topic-cards">
+        {% for card in cards %}
+        <article>
+            <div>
+                <h3>{{ card.title | safe }}</h3>
+                    <ul>
+                    {% for item in card.items %}
+                        <li><a href="{{item.url}}">{{ item.title | safe}}</a></li>
+                    {% endfor %}
+                    </ul>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
