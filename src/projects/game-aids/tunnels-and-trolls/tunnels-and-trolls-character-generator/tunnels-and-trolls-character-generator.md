@@ -1,16 +1,16 @@
 ---
 title: Tunnels & Trolls Character Generator
 layout: base-layout.njk
-permalink: /topics/game-aids/tunnels-and-trolls/{{ title | slug }}/
+permalink: /projects/game-aids/tunnels-and-trolls/{{ title | slug }}/
 is_app: True
 breadcrumbs:
   - label: Home
     url: /
   - label: Topics
-    url: /topics/
+    url: /projects/
   - label: Tunnels & Trolls
-    url: /topics/game-aids/tunnels-and-trolls/
-  - label: Character Generator
+    url: /projects/game-aids/tunnels-and-trolls/
+  - label: Tunnels & Trolls Character Generator
 tags:
   - Game Aids
   - TunnelsAndTrolls
