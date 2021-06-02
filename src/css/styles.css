@@ -148,6 +148,10 @@ nav ul li a {
     font-size: .9rem;
 }
 
+nav ul li a:nth-child(n+1) {
+    margin-left: .25rem;
+}
+
 nav ul li a:hover {
     color: var(--pheonic-gold);
 }
