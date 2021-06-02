@@ -6,3 +6,4 @@ src/img/.DS_Store
 .vscode/settings.json
 .DS_Store
 dist/
+build/
