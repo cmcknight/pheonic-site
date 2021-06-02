@@ -7,3 +7,4 @@ src/img/.DS_Store
 .DS_Store
 dist/
 build/
+package-lock.json
