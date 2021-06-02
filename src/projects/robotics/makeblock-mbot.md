@@ -1,12 +1,12 @@
 ---
 title: Makeblock mBot
-permalink: /topics/makeblock/{{ title | slug }}/
+permalink: /projects/makeblock/{{ title | slug }}/
 layout: page-layout.njk
 breadcrumbs:
   - label: Home
     url: /
   - label: Topics
-    url: /topics/
+    url: /projects/
   - label: Makeblock mBot
 tags:
   - mBot

@@ -1,14 +1,14 @@
 ---
 title: PyDevMgr - Python Development Manager
-permalink: /topics/desktop-projects/{{ title | slug }}/
+permalink: /projects/desktop-projects/{{ title | slug }}/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home
     url: /
   - label: Topics
-    url: /topics/
+    url: /projects/
   - label: Desktop Projects
-    url: /topics/desktop-projects/
+    url: /projects/desktop-projects/
   - label: PyDevMgr
 repo_link: https://github.com/cmcknight/PyDevMgr
 tags:

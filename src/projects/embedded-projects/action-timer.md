@@ -1,14 +1,14 @@
 ---
 title: ActionTimer for Arduino
-permalink: /topics/embedded-projects/{{ title | slug }}/
+permalink: /projects/embedded-projects/{{ title | slug }}/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home
     url: /
   - label: Topics
-    url: /topics/
+    url: /projects/
   - label: Embedded Projects
-    url: /topics/embedded-projects/
+    url: /projects/embedded-projects/
   - label: ActionTimer for Arduino
 repo_link: https://github.com/senestone/ActionTimer
 tags:
