@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /{{ title | slug }}/
+permalink: /{{ title | slugify }}/
 layout: page-layout.njk
 show_date: false
 ---

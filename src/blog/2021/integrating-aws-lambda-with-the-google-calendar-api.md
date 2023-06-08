@@ -1,20 +1,22 @@
 ---
 title: Integrating AWS Lambda with the Google Calendar API
-permalink: /blog/2021/{{title | slug }}/
+permalink: /blog/2021/{{title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-04-05
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: Integrating AWS Lambda with the Google Calendar API
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: Integrating AWS Lambda with the Google Calendar API
 tags:
   - posts
 ---
 
 <!-- Excerpt Start -->
+
 A funny thing happened on the way to reaching code complete on the Farmer Frog website. I needed to integrate an AWS Lambda function with the Google Calendar API. Now, you might ask yourself why I would need to do that, and it's a fair question. The short answer is that the website needs to be able to retrieve and display the public events without taking the user away from the website.
+
 <!-- Excerpt End -->
 
 The particular calendar that I needed to integrate with is set up as a public service-type Calendar which only requires an API key and knowledge of the endpoint instead of the usual OAuth 2 authentication. Having just finished getting the contact form working thanks to Kyle Galbraith's [_How to Host, Secure, and Deliver Static Websites on Amazon Web Services_](https://kylegalbraith.com/learn-aws/), I thought it would be a simple matter of essentially writing a microservice. I was somewhat correct and somewhat naive (okay, I was wrong, geez!). Here follows the bloody saga of getting the microservice written and operational.
@@ -38,20 +40,20 @@ const cal = google.calendar({
 //--------------- Utility Functions --------------------
 function lastDayInMonth(month, year) {
   const daysInMonth = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31,30, 31 ];
-  return ((month == 1) && 
-          (((year % 4 == 0) && (year %100 != 0)) || (year % 400 == 0))) 
-          ? daysInMonth[month] + 1 
+  return ((month == 1) &&
+          (((year % 4 == 0) && (year %100 != 0)) || (year % 400 == 0)))
+          ? daysInMonth[month] + 1
           : daysInMonth[month]
 }
 
 function handler (month, year) {
-    
+
     var headers = {
         'Access-Control-Allow-Headers' : 'Content-Type, X-Amz-Date, Authorization, X.Api-Key, X-Amz-Security-Token',
         'Access-Control-Allow-Methods': 'OPTIONS,POST',
         'Access-Control-Allow-Origin': '*'
     };
-    
+
     // test for bad dates
     if (month == -1 || year == -1) {
         response.body = JSON.stringify('Bad dates')
@@ -61,7 +63,7 @@ function handler (month, year) {
         const startDate = new Date(year, month, 1, 0, 0, 0).toISOString();
         const endDate = new Date(year, month, lastDayInMonth(month, year),23,59,59).toISOString();
         const userTimeZone = 'America/Los_Angeles'
-        
+
         console.log('Just before calling Google Calendar events.list')
         let res_parms = {
           timeMin: startDate,
@@ -114,7 +116,7 @@ OK, back to Google. Lots and lots of searching later, I found what part of the p
 
 I tried to execute the code again as a POST but I still got the _"Dreaded Malformed Lambda Proxy Response"_ error. Now what?
 
-More Googling, more testing, more frustration. 
+More Googling, more testing, more frustration.
 
 I posted my question on StackOverflow. No joy there.
 
@@ -142,8 +144,8 @@ const cal = google.calendar({
 //--------------- Utility Functions --------------------
 function lastDayInMonth(month, year) {
   const daysInMonth = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31,30, 31 ];
-  return ((month == 1) && 
-          (((year % 4 == 0) && (year %100 != 0)) || (year % 400 == 0))) 
+  return ((month == 1) &&
+          (((year % 4 == 0) && (year %100 != 0)) || (year % 400 == 0)))
           ? daysInMonth[month] + 1 // account for leap year
           : daysInMonth[month]
 }
@@ -152,30 +154,30 @@ function lastDayInMonth(month, year) {
 exports.handler = async (event, context, callback) => {
     // retrieve the month and year
     const { month, year } = JSON.parse(event.body)
-    
+
     // set up the headers for the response
     var headers = {
         'Access-Control-Allow-Headers' : 'Content-Type, X-Amz-Date, Authorization, X.Api-Key, X-Amz-Security-Token',
         'Access-Control-Allow-Methods': 'OPTIONS,POST',
         'Access-Control-Allow-Origin': '*'
     }
-    
+
     // set up the base response fields
     const response = {
         "statusCode": 200,
         "headers": headers,
         "body": ''
     }
-    
+
     // set the start date for the beginning of the of the first day of the month
     const startDate = new Date(year, month, 1, 0, 0, 0).toISOString()
 
     // set the start date for the end of the of the last day of the month
     const endDate = new Date(year, month, lastDayInMonth(month, year), 23, 59, 59).toISOString()
-    
+
     // set the time zone
     const timeZone = 'Americad/Los_Angeles'
-    
+
     // set up the parameters for the call to the Google Calendar API
     const res_params = {
         'timeMin': startDate,
@@ -185,7 +187,7 @@ exports.handler = async (event, context, callback) => {
         'singleEvents': true,
         'orderBy': 'startTime'
     }
-    
+
     await cal.events.list(res_params)
     .then(result => {
         response.body = JSON.stringify(result)

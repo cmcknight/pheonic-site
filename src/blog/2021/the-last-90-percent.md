@@ -1,19 +1,20 @@
 ---
 title: The Last 90 Percent
-permalink: /blog/2021/{{title | slug }}/
+permalink: /blog/2021/{{title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-03-09
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: The Last 90 Percent
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: The Last 90 Percent
 tags:
   - posts
 ---
 
 <!-- Excerpt Start -->
+
 Tom Cargill of Bell Labs is credited with the creation of the 90/90 rule for software development. The rule is:
 
 <div class="blockquote">

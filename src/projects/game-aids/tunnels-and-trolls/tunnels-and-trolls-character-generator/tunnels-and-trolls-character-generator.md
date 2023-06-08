@@ -1,7 +1,7 @@
 ---
 title: Tunnels & Trolls Character Generator
 layout: base-layout.njk
-permalink: /projects/game-aids/tunnels-and-trolls/{{ title | slug }}/
+permalink: /projects/game-aids/tunnels-and-trolls/{{ title | slugify }}/
 is_app: True
 breadcrumbs:
   - label: Home

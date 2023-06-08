@@ -1,7 +1,7 @@
 ---
 title: Getting Started With Eleventy Part 2
 layout: blog-article-layout.njk
-permalink: /blog/2020/{{ title | slug }}/
+permalink: /blog/2020/{{ title | slugify }}/
 date: 2020-12-19
 breadcrumbs:
   - label: Home
@@ -13,12 +13,15 @@ tags:
   - posts
   - eleventy
 ---
+
 ## Overview
 
 <!-- Excerpt Start -->
+
 This tutorial continues by converting the home page from a plain HTML file to one that is based on Nunjucks templates. This article was written with a slant towards Visual Studio Code as the development editor. If you are using something else (Atom, Sublime, etc.) you will need work out the steps for your environment.
 
 (All source code is available at [Github <i class="fa fa-link fa-1x"></i>](https://github.com/cmcknight/learning-eleventy))
+
 <!-- Excerpt End -->
 
 ## Partials and Layouts
@@ -29,7 +32,7 @@ A "layout" refers to the overall setup of the entire page which may contain part
 
 ## Getting Started
 
-The first step in any sort of conversion is to determine what parts of the page need to be reused across other pages. For our home page, we can see that the reusable portions of the page are the top portion of the document (```<!DOCTYPE>``` through ```</header>```) and the bottom portion (```<footer>``` through ```</html```). Let's isolate those into the ```_head.njk``` and ```_foot.njk``` into partials.
+The first step in any sort of conversion is to determine what parts of the page need to be reused across other pages. For our home page, we can see that the reusable portions of the page are the top portion of the document (`<!DOCTYPE>` through `</header>`) and the bottom portion (`<footer>` through `</html`). Let's isolate those into the `_head.njk` and `_foot.njk` into partials.
 
 ## Converting the HTML Page to Nunjucks Partials and Layout
 
@@ -177,7 +180,7 @@ The first step in creating the About page is to create a generic page template. 
 
 Our assumption will be that the developer knows a bit about Markdown and HTML/CSS so what we will need to do for the generic page layout is to provide for the common elements (header/footer) and process any other data as Markdown content.
 
- Markdown has become something of a de facto standard for writing HTML pages because the author can focus on the writing, then style the pages later on. Markdown also allows the author to freely intermingle HTML if a specific format / effect is desired. These pages are processed by a Markdown engine and converted to HTML.
+Markdown has become something of a de facto standard for writing HTML pages because the author can focus on the writing, then style the pages later on. Markdown also allows the author to freely intermingle HTML if a specific format / effect is desired. These pages are processed by a Markdown engine and converted to HTML.
 
 ```
 /src/partials_layouts/home_page.njk:
@@ -192,7 +195,7 @@ Our assumption will be that the developer knows a bit about Markdown and HTML/CS
 
 Here we see the Nunjucks directive _content_ used with a filter named _safe_. The _content_ directive includes any content from the body of the Mardown file after it has been processed by the Markdown processor. Interestingly you can also embed Nunjucks directives in the Markdown files after the frontmatter. The _safe_ filter marks the value as not needed to be automatically escaped.
 
-Now lets create the About page Markdown file. First create the _pages_ folder under the _src_ folder, then create the file ```about.md``` under that folder.
+Now lets create the About page Markdown file. First create the _pages_ folder under the _src_ folder, then create the file `about.md` under that folder.
 
 ```
 /src/pages/about.md:
@@ -210,6 +213,7 @@ Now lets create the About page Markdown file. First create the _pages_ folder un
 
 This page will tell somebody all about something about something...
 ```
+
 After you save the file, you can click the About link in the header and you should see the following:
 
 <div class="center-image">

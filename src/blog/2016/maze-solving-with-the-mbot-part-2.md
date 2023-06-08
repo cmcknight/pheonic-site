@@ -1,25 +1,27 @@
 ---
 title: Maze Solving with the mBot - Part 2
 layout: blog-article-layout.njk
-permalink: /blog/2016/{{ title | slug }}/
+permalink: /blog/2016/{{ title | slugify }}/
 date: 2016-01-26
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: Maze Solving with the mBot - Part 2
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: Maze Solving with the mBot - Part 2
 tags:
-    - posts
+  - posts
 ---
 
 <!-- Excerpt Start -->
+
 OK, so I've learned lots about the mBot and mBlock programming since my last post.
 
 ### The Good
 
 It is possible, with patience, to write highly readable programs in mBlock (Scratch 2.0).
 The Makeblock team keeps improving mBlock.
+
 <!-- Excerpt End -->
 
 ### The Not So Good
@@ -33,7 +35,8 @@ OK, enough of that. I knew it would be challenging, but perseverance is its own 
 
 <div class="image-container">
 
-[![mBot Solving a Maze](http://img.youtube.com/vi/yx6JtQVpcUw/0.jpg)](http://www.youtube.com/watch?v=yx6JtQVpcUw "mBot Solving a Maze")
+[![mBot Solving a Maze](http://img.youtube.com/vi/yx6JtQVpcUw/0.jpg)](http://www.youtube.com/watch?v=yx6JtQVpcUw 'mBot Solving a Maze')
+
 <figcaption>The Mighty mBot in Action!</figcaption>
 </div>
 

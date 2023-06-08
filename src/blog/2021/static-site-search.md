@@ -1,22 +1,24 @@
 ---
 title: Static Site Search
-permalink: /blog/2021/{{ title | slug }}/
+permalink: /blog/2021/{{ title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-01-29
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: Static Site Search
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: Static Site Search
 tags:
   - posts
 ---
 
 <!-- Excerpt Start -->
+
 So I am down to the last few odds and ends on the [Farmer Frog](https://farmerfrog.org) site migration from [Wordpress](https://wordpress.com) to a static site built with [Eleventy](https://11ty.dev) and the last big feature is the ability to do a full-text site search.
 
 This is actually a bit trickier than it might appear at first glance. A static site differs from one built atop an application server because there is no application server. (Yes, I hear all of you saying, 'Well, duh!').
+
 <!-- Excerpt End -->
 
 So what does that entail? Well, first off the site pages will need to be indexed when the site is built and that index will have to be deployed with the site. Size may well become an issue depending on the number of pages and the size of those pages. Why is that an issue? Because that index will be loaded by the browser.
@@ -33,8 +35,8 @@ const cheerio = require('cheerio');
 const MiniSearch = require('minisearch');
 
 const jsonDocs = [];
-const EXCLUDES = ['**/node_modules/**', 
-                  '**/categories/**', 
+const EXCLUDES = ['**/node_modules/**',
+                  '**/categories/**',
                   '**/tags/**',
                   '**/docs/**',
                   '**/articles/**',
@@ -101,7 +103,6 @@ fs.writeFile(OUTPUT_DIR + '/searchIndex.json', JSON.stringify(jsonDocs), functio
 ```
 
 Now it was time to create the Javascript for the site to use minisearch. I'm still relatively new to Javascript, but the code below seems to work as I expect. I chose to rewrite the content body of the home page that exists between the navigation menu and the footer with the results of the search, and I made that div scrollable. Other than a few media queries to change font size, the code worked fine and it's pretty quick!
-
 
 ```
 const searchButton = document.getElementById('search-btn');
@@ -172,4 +173,3 @@ function performSiteSearch(params) {
 ```
 
 When I get some open time, I will try to create a step by step tutorial that walks through the process, but hopefully the code proves to be helpful.
-

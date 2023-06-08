@@ -1,6 +1,6 @@
 ---
 title: PyDevMgr - Python Development Manager
-permalink: /projects/desktop-projects/{{ title | slug }}/
+permalink: /projects/desktop-projects/{{ title | slugify }}/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home
@@ -19,16 +19,17 @@ tags:
 ---
 
 <!-- Excerpt Start-->
+
 The PyDevMgr provides a simple GUI interface to launch development tools/environments.<!-- Excerpt End -->
 
 ### Features
 
-* Create new task
-* Execute task
-* Update task
-* Track number of times executed
-* Remove task
-* Sorts tasks by number of times executed in descending order
+- Create new task
+- Execute task
+- Update task
+- Track number of times executed
+- Remove task
+- Sorts tasks by number of times executed in descending order
 
 <br>
 
@@ -38,6 +39,7 @@ The PyDevMgr provides a simple GUI interface to launch development tools/environ
 <div class="center-text">
 
 ### Screen Shots
+
 </div>
 
 <div class="center-image">

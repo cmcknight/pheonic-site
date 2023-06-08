@@ -3,10 +3,10 @@ const moment = require('moment');
 
 moment.locale('en');
 
-
 module.exports = function (eleventyConfig) {
-
-  eleventyConfig.addPassthroughCopy({'src/projects/**/css':'build/projects'})
+  eleventyConfig.addPassthroughCopy({
+    'src/projects/**/css': 'build/projects',
+  });
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addPassthroughCopy('src/_data');
@@ -19,10 +19,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('setCopyright', (copyright) => {
     let now = new Date();
-    let currentYear = now.getFullYear()
-    copyright = `${copyright} - ${currentYear}`
-    return (copyright)
-  })
+    let currentYear = now.getFullYear();
+    copyright = `${copyright} - ${currentYear}`;
+    return copyright;
+  });
 
   eleventyConfig.addFilter('dateReadable', (date) => {
     return moment(date).utc().format('LL');
@@ -41,12 +41,15 @@ module.exports = function (eleventyConfig) {
       data: '_data',
       includes: 'partials_layouts',
     },
+    markdownTemplateEngine: 'njk',
   };
 };
 
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
-    console.warn('Failed to extract excerpt: Document has no property "templateContent".');
+    console.warn(
+      'Failed to extract excerpt: Document has no property "templateContent".'
+    );
     return null;
   }
 
@@ -70,7 +73,9 @@ function extractExcerpt(article) {
     const endPosition = content.indexOf(separators.end);
 
     if (startPosition !== -1 && endPosition !== -1) {
-      excerpt = content.substring(startPosition + separators.start.length, endPosition).trim();
+      excerpt = content
+        .substring(startPosition + separators.start.length, endPosition)
+        .trim();
       return true; //
     }
   });

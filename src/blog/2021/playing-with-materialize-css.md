@@ -1,6 +1,6 @@
 ---
 title: Playing with Materialize CSS
-permalink: /blog/2021/{{title | slug }}/
+permalink: /blog/2021/{{title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-06-01
 breadcrumbs:
@@ -14,24 +14,26 @@ tags:
 ---
 
 <!-- Excerpt Start -->
-I've started experimenting with CSS frameworks to expand my knowledge base. While HTML5 / CSS3 have somewhat subsumed a lot of what those frameworks were originally developed to solve by being based on JQuery, more and more of them are moving away from JQuery as their underlying basis and towards some custom Javascript to support components and CSS3 everywhere else. 
+
+I've started experimenting with CSS frameworks to expand my knowledge base. While HTML5 / CSS3 have somewhat subsumed a lot of what those frameworks were originally developed to solve by being based on JQuery, more and more of them are moving away from JQuery as their underlying basis and towards some custom Javascript to support components and CSS3 everywhere else.
+
 <!-- Excerpt End -->
 
 There are still use cases for using JQuery, but as JQuery seems to have originally been built to solve cross-browser compatibility issues, it appears to be falling out of favor with more modern browsers being mostly compliant with "web standards". Several pundits have also noted that JQuery continues to get bigger and slower which is also likely driving the emergence of JQuery-less CSS frameworks.
 
 Other frameworks I plan to look at are:
 
-* Bootstrap 5
-* Bulma
-* Foundation
-* SkeletonCSS
-* TailwindCSS
+- Bootstrap 5
+- Bulma
+- Foundation
+- SkeletonCSS
+- TailwindCSS
 
 At some point in the future when I get some "copious free time", I plan to redesign this site using one of those frameworks because nothing will teach you better than a hands-on project that is more than just an academic toy.
 
-So why investigate CSS Frameworks instead of rolling your own you might ask. The rationale is the same for any other endeavor that has many moving parts. A great deal of the rationale is to move towards standardization of the components (the atomic details) to focus on the system as a whole. Most desktop applications use the standard components for controls and the styling is pretty well baked in. Although one can write custom controls or perform some level of customization on standard controls, the appearance will be fairly standard across the same platform (the Qt library provides the same appearance across all platforms but that may not be desirable). Therefore the ability to freely style components is a strength of web development. 
+So why investigate CSS Frameworks instead of rolling your own you might ask. The rationale is the same for any other endeavor that has many moving parts. A great deal of the rationale is to move towards standardization of the components (the atomic details) to focus on the system as a whole. Most desktop applications use the standard components for controls and the styling is pretty well baked in. Although one can write custom controls or perform some level of customization on standard controls, the appearance will be fairly standard across the same platform (the Qt library provides the same appearance across all platforms but that may not be desirable). Therefore the ability to freely style components is a strength of web development.
 
-However, one can while away endless hours essentially bit-twiddling with CSS. Unlike desktop applications, web pages have to provide a reasonable presentation on a far larger array of screen sizes and browser capabilities than do native applications. That's where CSS frameworks can alleviate some of the effort by providing "pre-built" components. 
+However, one can while away endless hours essentially bit-twiddling with CSS. Unlike desktop applications, web pages have to provide a reasonable presentation on a far larger array of screen sizes and browser capabilities than do native applications. That's where CSS frameworks can alleviate some of the effort by providing "pre-built" components.
 
 Bootstrap is one of the oldest "front-end" frameworks and provides excellent responsiveness across most, if not all, screen sizes. Unfortunately, a lot of web developers just grab a Bootstrap template and do comparatively minor modifications. This has resulted in a large number of web sites that are "template-y" (which some translate to "boring"). The sites work well, but in general there is nothing from a design perspective to differentiate them from the thousands of other sites that used the same template.
 

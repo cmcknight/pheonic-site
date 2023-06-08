@@ -1,20 +1,22 @@
 ---
 title: The Joys of Documentation
-permalink: /blog/2021/{{title | slug }}/
+permalink: /blog/2021/{{title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-02-16
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: The Joys of Documentation
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: The Joys of Documentation
 tags:
   - posts
 ---
 
 <!-- Excerpt Start -->
+
 You know you're getting towards the end of the project when it's time to start putting your dev notes into documentation. In my case, the documentation for the [Farmer Frog](https://farmerfrog.org) site has to cover a wide variety of topics for several different audiences. My initial thought was "hey, I'll just store this stuff in a docs folder and call it good". That lasted for about three days until I realized that most developers would like to have a way to search docs for information.
+
 <!-- Excerpt End -->
 
 Sigh...

@@ -1,20 +1,22 @@
 ---
 title: Maze Solving with the mBot
 layout: blog-article-layout.njk
-permalink: /blog/2015/{{ title | sluge }}/
+permalink: /blog/2015/{{ title | slugify }}/
 date: 2015-12-03
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: Maze Solving with the mBot
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: Maze Solving with the mBot
 tags:
-    - posts
+  - posts
 ---
 
 <!-- Excerpt Start -->
+
 One of the exercises that I want to do with the mBot is to write a maze solving application in the mBlock environment. While it certainly would be easier to do in the native Arduino environment, I'm always up for a challenge. The mBlock environment is based on the Scratch 2.0 offline editor and is open source software. One of the issues with the Scratch 2.0 offline editor is that it is written in Adobe's proprietary ActionScript. Yes, you read that correctly, ActionScript. For Adobe Air. You know, the supposedly cross-platform environment that isn't supported under Linux (FAIL!@!). In any case, enough ranting about the choice of development language the MIT team has made, I have to live with it (for now).
+
 <!-- Excerpt End -->
 
 One of the constraints of Scratch is that it really doesn't have any data structures beyond a linked list that can only contain numbers or strings. It's likely okay for teaching basic programming, but the inability to have lists of lists eliminates any easy approach to custom data structures and imposes a lot of overhead for keeping lists synchronized to emulate data structures. Sigh. Did I mention that I'm always up for a challenge?

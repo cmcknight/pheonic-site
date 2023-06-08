@@ -1,6 +1,6 @@
 ---
 title: Projects
-permalink: /{{ title | slug }}/
+permalink: /{{ title | slugify }}/
 layout: projects-index.njk
 breadcrumbs:
   - label: Home

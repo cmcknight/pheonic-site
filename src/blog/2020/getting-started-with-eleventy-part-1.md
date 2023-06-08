@@ -1,7 +1,7 @@
 ---
 title: Getting Started With Eleventy Part 1
 layout: blog-article-layout.njk
-permalink: /blog/2020/{{ title | slug }}/
+permalink: /blog/2020/{{ title | slugify }}/
 date: 2020-12-18
 breadcrumbs:
   - label: Home
@@ -17,12 +17,15 @@ tags:
 ## Overview
 
 <!-- Excerpt Start -->
+
 This tutorial provides a simple walkthrough to set up the Eleventy development environment and create a simple site. This article was written with a slant towards Visual Studio Code as the development editor. If you are using something else (Atom, Sublime, etc.) you will need work out the steps for your environment.
 
 (All source code is available at [Github <i class="fa fa-link fa-1x"></i>](https://github.com/cmcknight/learning-eleventy))
+
 <!-- Excerpt End -->
 
 ## Setting up the Environment
+
 Eleventy requires several tools to be installed before you can begin to work with the static site generator. See the [Development Environment Setup](/development/dev-env-setup/) article for those details. You can skip the step for sending your email to the technical lead because the Git repository used for this example is a public repository.
 
 ## Cloning the Git Repository
@@ -71,7 +74,7 @@ The following instructions are for Visual Studio Code. If you are using a differ
 
 **6. Select the _cmcknight/learning-eleventy_ Repository**
 
-Type: ```cmcknight/learning-eleventy``` in the clone repository field.
+Type: `cmcknight/learning-eleventy` in the clone repository field.
 
 <div class="center-image">
 <img src="/img/getting-started-with-eleventy/clone-repo-3.png" alt="Select Repository" style="max-width: 40%;">
@@ -105,12 +108,11 @@ Eleventy is relatively unopionated with regard to how you wish to organize your 
 
 However, this should not be taken as an end-all / be-all file structure because each projects has its own needs. Also note that Git does not archive empty folders, so the following folders are not present in the Github repository.
 
-* _data - any data required by the project
-* blog - blog post files
-* js - Javascript files
-* pages - web page files
-* partials_layouts - component and page layout files
-
+- \_data - any data required by the project
+- blog - blog post files
+- js - Javascript files
+- pages - web page files
+- partials_layouts - component and page layout files
 
 Click on the right chevrons (>) for the src and css folders. You should see something that resembles Figure 10:
 
@@ -137,10 +139,9 @@ You should see a pane open at the bottom of the window:
 <figcaption>Figure 12: Live Terminal</figcaption>
 </div>
 
-
 **2. Perform the first build of the Site**
 
-In the live terminal, enter ```npm run build``` and tap the Enter key.
+In the live terminal, enter `npm run build` and tap the Enter key.
 
 <div class="center-image">
 <img src="/img/getting-started-with-eleventy/build-project-1.png" alt="Run Build Script" style="max-width: 50%;">
@@ -167,7 +168,7 @@ Eleventy packages a built-in web server that will allow you to view the site. Th
 
 **NOTE**: If there are errors you will see them displayed in the live terminal, so if you are making changes and nothing seems to be happening, check the live terminal to see if any errors have occurred.
 
-To run the live server, you will need to enter ```npm run dev``` in the live terminal.
+To run the live server, you will need to enter `npm run dev` in the live terminal.
 
 <div class="center-image">
 <img src="/img/getting-started-with-eleventy/live-reload-server-1.png" alt="Running the Live Reload Server" style="max-width: 50%;">

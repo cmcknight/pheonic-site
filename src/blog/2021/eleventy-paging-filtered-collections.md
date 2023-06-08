@@ -1,30 +1,32 @@
 ---
-title: "Eleventy: Paging Filtered Collections"
-permalink: /blog/2021/{{ title | slug }}/
+title: 'Eleventy: Paging Filtered Collections'
+permalink: /blog/2021/{{ title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-01-22
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: "Eleventy: Paging Filtered Collections"
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: 'Eleventy: Paging Filtered Collections'
 tags:
   - posts
   - Eleventy
 ---
 
 <!-- Excerpt Start -->
+
 I have mentioned in the past that I am using [Eleventy](https://11ty.dev) for this blog and to build a site for a non-profit organization, [Farmer Frog](https://farmerfrog.org), that distributes food donations to 1.5+ million people across the Pacific Northwest. The blog is sort of my sandbox for testing things before I incorporate them into the Farmer Frog site. Farmer Frog had a blog at one point that was dropped because it was not getting many views. However there are some interesting articles on the blog so I have resuscitated it as part of the move from Wordpress to Eleventy.
+
 <!-- Excerpt End -->
 
 Everything was sailing right along until the time came to create custom collections of articles associated with an author. On a single-author blog, this wouldn't be an issue, but there are several authors on the Farmer Frog blog so I needed a way to create a collection of posts for each author. My initial take was to try to create a custom collection:
 
-```    
+```
 eleventyConfig.addCollection('authorPosts', function(collectionApi) {
   let myColl = [];
   let posts = collectionApi.getFilteredByTag('posts');
-  
+
   // build array of author post objects
   posts.forEach(post => {
       if (myColl.length == 0) {
@@ -81,10 +83,10 @@ So I wound up rewriting the frontmatter from this:
     {% raw %}
     ---
     title: "Blog"
-    permalink: "/authors/john-doe/{% if pagination.pageNumber > 0 %}{% pagination.pageNumber | plus: 1 %}{% endif %}/index.html"
+    permalink: "/authors/john-doe/{% if pagination.pageNumber > 0 %}{% pagination.pageNumber + 1 %}{% endif %}/index.html"
     layout: "author-posts.njk"
     author: "John Doe"
-    breadcrumbs: 
+    breadcrumbs:
       - label: "Home"
         url: "/"
       - label: "Blog"
@@ -108,19 +110,19 @@ to this:
     ---js
     {
       title: "Blog",
-      permalink: "/authors/john-doe/{% if pagination.pageNumber > 0 %}{% pagination.pageNumber | plus: 1 %}{% endif %}/index.html"
+      permalink: "/authors/john-doe/{% if pagination.pageNumber > 0 %}{% pagination.pageNumber + 1 %}{% endif %}/index.html"
       layout: "author-posts.njk",
       author: "John Doe",
-      breadcrumbs: [ 
-        {label: "Home", url: "/"}, 
-        {label: "Blog", url: "/blog/"}, 
+      breadcrumbs: [
+        {label: "Home", url: "/"},
+        {label: "Blog", url: "/blog/"},
         {label: "John Doe"}],
       pagination: {
         data: "collections.posts",
         size: 4,
         reverse: true,
         alias: "posts",
-        before: function(data) { 
+        before: function(data) {
           return data.filter(x => x.data.author === "John Doe" )
           };
       }
@@ -144,7 +146,6 @@ to this:
 Finally! It works as expected. To be honest, I was half-expecting that it might require a plugin or that I'd have to write something specific because 11ty is still relatively young and is under constant development so finding the **before:** property made my task much simpler.
 
 <br>
-
 
 <hr style="width: 20rem;">
 <sup id="fn1">1</sup>A dictionary is the same thing as a Javascript object.<a href="#fnote1">&larrhk;</a>

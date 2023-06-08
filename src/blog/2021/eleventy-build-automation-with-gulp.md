@@ -1,20 +1,22 @@
 ---
 title: Eleventy Build Automation with Gulp
-permalink: /blog/2021/{{ title | slug }}/
+permalink: /blog/2021/{{ title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-03-26
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: Eleventy Build Automation with Gulp
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: Eleventy Build Automation with Gulp
 tags:
   - posts
 ---
 
 <!-- Excerpt Start -->
-Building a site with Eleventy is pretty slick and relatively simple, but when you are ready to deploy your content you really need to do some cleanup, minfiication, etc., to ensure that you are using as little bandwidth and storage as possible. You _could_ do that manually every time or build scripts to do that, but there is a better answer if you are somewhat familiar with Javascript:  [Gulp](https://gulpjs.org).
+
+Building a site with Eleventy is pretty slick and relatively simple, but when you are ready to deploy your content you really need to do some cleanup, minfiication, etc., to ensure that you are using as little bandwidth and storage as possible. You _could_ do that manually every time or build scripts to do that, but there is a better answer if you are somewhat familiar with Javascript: [Gulp](https://gulpjs.org).
+
 <!-- Excerpt End -->
 
 Gulp is a task runner that essentially is like a makefile utility. The tasks are defined in a file named _gulpfile.js_. Rather than bore the reader with a long, theoretical monologue, let me provide an example of a gulpfile that I just completed for the documentation site I built for [Farmer Frog](https://farmerfrog.org). This walkthrough assumes you are familiar with Javascript.
@@ -110,7 +112,7 @@ const processHTML = () => {
 }
 ```
 
-In the _processHTML()_ task, we see that the locaiton of the input files are specified in the _src_ arguments and a _globstar_ argument ('**') is used to take in all files and directories under the source folder. Essentially the src method will loop over each file it finds and read the content into a stream that it passes on down the chain.
+In the _processHTML()_ task, we see that the locaiton of the input files are specified in the _src_ arguments and a _globstar_ argument ('\*\*') is used to take in all files and directories under the source folder. Essentially the src method will loop over each file it finds and read the content into a stream that it passes on down the chain.
 
 As each file is read, it is passed into the _.pipe()_ function that calls the gulp plug-in for _htmlmin_ and passes the _collapseWhitespace_ argument to _htmlmin_.
 
@@ -163,6 +165,7 @@ const processCSS = () => {
   .pipe(dest('./dist'))
 }
 ```
+
 <br>
 
 ---
@@ -197,9 +200,9 @@ const optimizeImages = () => {
     imagemin.gifsicle({ interlaced: true }),
     imagemin.mozjpeg({ quality: 50, progressive: true }),
     imagemin.optipng({ optimizationLevel: 5 }),
-    imagemin.svgo( { 
-      plugins: [ 
-        { removeViewBox: true }, 
+    imagemin.svgo( {
+      plugins: [
+        { removeViewBox: true },
         { cleanupIDs: false}
       ]
     })
@@ -231,8 +234,8 @@ Note the use of the asynch/await directives. These are required because all Gulp
 // Build the site index from the HTML files
 const buildIndex = () => {
   const jsonDocs = [];
-  const EXCLUDES = ['**/node_modules/**', 
-                    '**/categories/**', 
+  const EXCLUDES = ['**/node_modules/**',
+                    '**/categories/**',
                     '**/tags/**',
                     '**/docs/**',
                     '**/articles/**',
@@ -361,9 +364,9 @@ const monitor = () => {
 
 ## Exported Tasks
 
-All of the tasks discussed so far are private. Like all Javascript modules, anything that must be externally visible must be exported. Gulp supports the notion of a default task (named _default_) as well as individually named tasks. 
+All of the tasks discussed so far are private. Like all Javascript modules, anything that must be externally visible must be exported. Gulp supports the notion of a default task (named _default_) as well as individually named tasks.
 
-An exported task may be assigned to a single function, as in the case of the _monitor_, _clean\_build_, _clean\_dist_, and _clean\_all_ tasks. Gulp also provides two functions, _serial()_ and _parallel()_, that provide the capability to specify that tasks should be performed serially or in parallel despite all tasks in Gulp being asynchronous.
+An exported task may be assigned to a single function, as in the case of the _monitor_, _clean_build_, _clean_dist_, and _clean_all_ tasks. Gulp also provides two functions, _serial()_ and _parallel()_, that provide the capability to specify that tasks should be performed serially or in parallel despite all tasks in Gulp being asynchronous.
 
 ```
 // define Gulp External Tasks
@@ -371,13 +374,13 @@ An exported task may be assigned to a single function, as in the case of the _mo
 // build the dist folder contents
 exports.default = series( cleanBuild,
                           cleanDist,
-                          render, 
+                          render,
                           buildSiteIndex,
                           copyIndexFile,
-                          processHTML,  
-                          siteMap, 
-                          processCSS, 
-                          processJavascript, 
+                          processHTML,
+                          siteMap,
+                          processCSS,
+                          processJavascript,
                           optimizeImages,
                           copyRobotsText);
 
@@ -394,7 +397,7 @@ exports.clean_dist = cleanDist;
 exports.clean_all = parallel( cleanBuild, cleanDist)
 ```
 
-As you can see, the default task is reponsible for creating the production build. To do so, it first cleans out the _build_ and _dist_ directories, then calls the _render_ internal task to generate the site to the _build_ directory before executing the remaind of the tasks. It is also important to note that default task conducts its tasks in series while the _clean\_all_ task executes its tasks in parallel.
+As you can see, the default task is reponsible for creating the production build. To do so, it first cleans out the _build_ and _dist_ directories, then calls the _render_ internal task to generate the site to the _build_ directory before executing the remaind of the tasks. It is also important to note that default task conducts its tasks in series while the _clean_all_ task executes its tasks in parallel.
 
 <br>
 

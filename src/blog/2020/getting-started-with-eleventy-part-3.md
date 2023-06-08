@@ -1,7 +1,7 @@
 ---
 title: Getting Started With Eleventy Part 3
 layout: blog-article-layout.njk
-permalink: /blog/2020/{{ title | slug }}/
+permalink: /blog/2020/{{ title | slugify }}/
 date: 2020-12-20
 breadcrumbs:
   - label: Home
@@ -13,12 +13,15 @@ tags:
   - posts
   - eleventy
 ---
+
 ## Overview
 
 <!-- Excerpt Start -->
+
 In this tutorial we will cover creating layouts for a blog post, front page blog roll (as a partial), and the main blog page.
 
 (All source code is available at [Github <i class="fa fa-link fa-1x"></i>](https://github.com/cmcknight/learning-eleventy))
+
 <!-- Excerpt End -->
 
 ## The Blog Post Page
@@ -34,11 +37,11 @@ src/articles/first-post.md
 title: Blog
 article_title: First Post
 layout: post.njk
-permalink: /blog/(( article_title | slug ))/
+permalink: /blog/(( article_title | slugify ))/
 ---
 ```
 
-We are generating the permalink by passing the article title through a filter named _slug_ that converts all of the letters to lower case and converts spaces to dashes (-). Given the article title above, the permalink would become: _/blog/first-post/_.
+We are generating the permalink by passing the article title through a filter named _slugify_ that converts all of the letters to lower case and converts spaces to dashes (-). Given the article title above, the permalink would become: _/blog/first-post/_.
 
 Blog posts also require a date so that the reader has some indication of when the post was created. The date is also needed for the blogrolls so that the posts can be sorted in reverse order to display the most recent post first. Let's add the date item to the frontmatter.
 
@@ -49,13 +52,13 @@ src/articles/first-post.md
 title: Blog
 article_title: First Post
 layout: post.njk
-permalink: /blog/(( article_title | slug ))/
+permalink: /blog/(( article_title | slugify ))/
 date: 2021-03-21
 ---
 {% endraw %}
 ```
 
-Note that the date is entered in the Year-Month-Day format. This is entirely for sorting purposes and any other format will likely not work. Unfortunately, the displayed date  will be quite unattractive as it will contain all of the date and time data. 
+Note that the date is entered in the Year-Month-Day format. This is entirely for sorting purposes and any other format will likely not work. Unfortunately, the displayed date will be quite unattractive as it will contain all of the date and time data.
 
 <div class="center-image">
 <img src="/img/getting-started-with-eleventy/blog-post-date-1.png" alt="Raw Date Format" style="width: 60%;">
@@ -82,7 +85,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('dateReadableShortDate', date => {
         return moment(date).utc().format('MMM D YYYY');
     })
-    
+
     return {
         dir: {
             input: 'src',
@@ -139,7 +142,7 @@ The final step is to add the tags object to the frontmatter so that the posts ca
 title: Blog
 article_title: First Post
 layout: post.njk
-permalink: /blog/{{ article_title | slug }}/
+permalink: /blog/{{ article_title | slugify }}/
 date: 2021-03-21
 tags:
   - posts
@@ -169,7 +172,7 @@ src/partials_layouts/blog.njk
             <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
           </div>
           <div class="article-body">
-            
+
             {% excerpt post %}
 
             <p class="text-right read-more-link">
@@ -223,10 +226,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('dateIso', date => {
         return moment(date).toISOString();
     });
-    
+
     // excerpt shortcode
     eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
-    
+
     return {
         dir: {
             input: 'src',
@@ -278,7 +281,7 @@ The next step is to create the blogroll page:
 ---
 title: Blog
 layout: blog.njk
-permalink: "/{{ title | slug }}/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus 1 }}/{% endif %}index.html"
+permalink: "/{{ title | slugify }}/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus 1 }}/{% endif %}index.html"
 pagination:
   data: collections.post
   size: 4
@@ -292,10 +295,10 @@ There are several things to understand here so let's begin with the _permalink_.
 
 The next item to consider is the _pagination_ object. The Eleventy pagination objects provides the capability to group a collection and provide both previous and next pages for the groups. The pagination object above uses four parameters:
 
-* data - the source of the data
-* size - The number of items per page
-* reverse - Sort in reverse date order
-* alias - short name for the collection
+- data - the source of the data
+- size - The number of items per page
+- reverse - Sort in reverse date order
+- alias - short name for the collection
 
 The first Nunjucks directive under the _blog-content-container_ div is a for loop that iterates over the posts collection using the alias, _posts_. It then uses data from the retrieved post to dipsplay the article title and the date of the post. The _excerpt_ shortcode is then used to grab an excerpt from the post text. Following the excerpt is a _Read more..._ link that takes the user to the full blog post.
 
@@ -361,5 +364,6 @@ With this final component in place, we now have a home page that updates wheneve
 
 That about wraps up this tutorial on blog posts, blog rolls, and the home page blogroll partial. This is currently the last of the tutorials on getting started with Eleventy, but I encourage you to continue experimenting and pushing the boundaries.
 
-----
+---
+
 <sup id="fn1">[1]</sup> _dateISO_, _dateReadable_, _dateReadableShortDate_, and _excerpt_ shortcode from <a href="https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy/">Creating a Blog With Eleventy</a> <a href="#fnote1">[&larrhk;]</a>

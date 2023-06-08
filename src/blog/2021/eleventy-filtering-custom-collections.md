@@ -1,21 +1,23 @@
 ---
-title: "Eleventy: Filtering Custom Collections"
-permalink: /blog/2021/{{ title | slug }}/
+title: 'Eleventy: Filtering Custom Collections'
+permalink: /blog/2021/{{ title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-01-24
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: "Eleventy: Filtering Custom Collections"
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: 'Eleventy: Filtering Custom Collections'
 tags:
   - posts
   - Eleventy
 ---
 
 <!-- Excerpt Start -->
+
 Today I needed to create more pages for the [Farmer Frog](https://farmerfrog.org) site that I am building in [Eleventy](https://11ty.dev). The site has a group of categories that have one or more posts associated with each category. Having recently discovered the joys of the **before:** property, I teed it up to solve this issue.
+
 <!-- Excertp End -->
 
 The categories for each article are stored in the frontmatter:
@@ -50,12 +52,11 @@ The first step in the process was to create a custom collection of posts that ha
 
 The next step was to set up the frontmatter for each category page:
 
-
-```
+```js
     ---js
     {
       title: ["Blog : Category : My Category"],
-      permalink: "/categories/my-category/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html",
+      permalink: "/categories/my-category/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}{% endif %}/index.html",
       layout: "category.njk",
       breadcrumbs: [ {label: "Home", url: "/"}, {label: "Blog", url: "/blog/"}, {label: "My Category"}],
       pagination: {

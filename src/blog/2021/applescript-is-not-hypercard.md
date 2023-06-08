@@ -1,20 +1,22 @@
 ---
 title: Applescript is not Hypercard
-permalink: /blog/2021/{{ title | slug }}/
+permalink: /blog/2021/{{ title | slugify }}/
 layout: blog-article-layout.njk
 date: 2021-01-07
 breadcrumbs:
-    - label: Home
-      url: /
-    - label: Blog
-      url: /blog/
-    - label: Applescript is not Hypercard
+  - label: Home
+    url: /
+  - label: Blog
+    url: /blog/
+  - label: Applescript is not Hypercard
 tags:
   - posts
 ---
 
 <!-- Excerpt Start -->
+
 Developers are lazy and good developers are _**really**_ lazy. I do not say that to be disparaging. Good developers are always looking for a way to automate the grunt work (defined as anything that is repetitve). The tools used range from custom shell scripts to full-on automation suites in the endless quest to provide more time to focus on the important things in life. Like Apex or Fortnight.
+
 <!-- Excerpt End -->
 
 That being the case, I've started working with Applescript to automate some of the daily tasks that I've identified as repetitive (read boring). I have worked off and on with Hypercard (now [LiveCode](https://livecode.com)), and great product that originated on the Apple MacIntosh. I remember HyperCard allowing a lot of people to create applications that might have been far more daunting in Objective C. Unfortunately, Apple chose to let go of HyperCard.

@@ -1,6 +1,6 @@
 ---
 title: Makeblock mBot
-permalink: /projects/makeblock/{{ title | slug }}/
+permalink: /projects/makeblock/{{ title | slugify }}/
 layout: page-layout.njk
 breadcrumbs:
   - label: Home

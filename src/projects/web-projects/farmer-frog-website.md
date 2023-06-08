@@ -1,6 +1,6 @@
 ---
 title: Farmer Frog Website
-permalink: /projects/web-projects/{{ title | slug }}/
+permalink: /projects/web-projects/{{ title | slugify }}/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home

@@ -1,6 +1,6 @@
 ---
 title: ActionTimer for Arduino
-permalink: /projects/embedded-projects/{{ title | slug }}/
+permalink: /projects/embedded-projects/{{ title | slugify }}/
 layout: project-page-layout.njk
 breadcrumbs:
   - label: Home
@@ -14,10 +14,12 @@ repo_link: https://github.com/senestone/ActionTimer
 tags:
   - Arduino
   - C
-  - "C++"
+  - 'C++'
   - Embedded
 ---
 
 <!-- Excerpt Start -->
+
 The ActionTimer object utilizes the millis() command to provide a straightforward way to control the execution times within an Arduino sketch without using the blocking delay() method.
+
 <!-- Excerpt End -->
